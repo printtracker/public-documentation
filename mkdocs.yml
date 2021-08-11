@@ -15,7 +15,7 @@ nav:
       - Jobs and DCAs: something.md
       - Configuring Settings: something.md
       - Reporting and Analysis:
-          - Overview: webadmin/reporting-and-analysis/overview.md
+#          - Overview: webadmin/reporting-and-analysis/overview.md
           - Custom Reports: webadmin/reporting-and-analysis/custom-reports.md
           - Table Schema Viewer: webadmin/reporting-and-analysis/table-schema-viewer.md
   - Data Collection Agent:

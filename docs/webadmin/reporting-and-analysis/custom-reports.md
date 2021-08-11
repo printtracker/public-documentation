@@ -3,7 +3,7 @@ Custom reports allow you to design a build exportable reports using SQL queries.
 A report can be one of several report types. The report type determines the type of data that is available for use in the report. We'll go into each of these report types in detail later on.
 
 * [Device](#device) - Returns information about devices such as the make, model, serial number, IP address, mac address, asset ID, location, notes, entity name and latest meter read timestamp. This report type is useful for getting information about your fleet of devices.
-* [Current Meter](#current-meter) - Returns the previously mentioned device information along with columns for the most recent meter read of the device. To learn more about the schema design for meter reads, see [Meter Read Table Schema](#Meter Read Table Schema).
+* [Current Meter](#current-meter) - Returns the previously mentioned device information along with columns for the most recent meter read of the device. To learn more about the schema design for meter reads, see [Meter Read Table Schema](#meter-read-table-schema).
 * [Volume Analysis](#volume-analysis) - Returns the previously mentioned device information along with columns for the first meter and last meter reads in a specified date range. This report is useful for comparing the volume changes in different meters over time.
 * [Billing Period](#billing-period) - Returns the same information as the Volume Analysis report but allows the user to specify a single billing date. All devices that have been configured to bill on the specified date will be returned in the report.
 
@@ -43,7 +43,7 @@ ORDER BY count DESC
 
 
 ### Current Meter
-In a normal scenario, an install will collect a meter read from a device every day. This report type allows you to view the most recent meter read collected for this device. There are many available column names, to learn more about the schema design for meter reads, see [Meter Read Table Schema](#Meter Read Table Schema) or use the [Table Schema viewer](./table-schema-viewer.md).
+In a normal scenario, an install will collect a meter read from a device every day. This report type allows you to view the most recent meter read collected for this device. There are many available column names, to learn more about the schema design for meter reads, see [Meter Read Table Schema](#meter-read-table-schema) or use the [Table Schema viewer](./table-schema-viewer.md).
 
 In this example, we'll use this report type to view the most recent values for the total, total black and total color counters.
 
@@ -68,7 +68,7 @@ ORDER BY latest_meter_timestamp DESC
 |HP      |LaserJet MFP M426fdn|2021-08-10 08:57:30|49900              |49900      |           |
 
 ### Volume Analysis
-This report type allows you to compare any meter read value between two dates that you can specify. The first meter read column names are prefixed with `first_` and the last meter read column names are prefixed with `last_`. This report is different than the previously mentioned reports because it allows you to specify a start and end date. The first meter read returned is the meter read closest to, but greater than the start date. The last meter read returned is the meter read closest to but less than the end date. There are many available column names, to learn more about the schema design for meter reads, see [Meter Read Table Schema](#Meter Read Table Schema) or use the [Table Schema viewer](./table-schema-viewer.md).
+This report type allows you to compare any meter read value between two dates that you can specify. The first meter read column names are prefixed with `first_` and the last meter read column names are prefixed with `last_`. This report is different than the previously mentioned reports because it allows you to specify a start and end date. The first meter read returned is the meter read closest to, but greater than the start date. The last meter read returned is the meter read closest to but less than the end date. There are many available column names, to learn more about the schema design for meter reads, see [Meter Read Table Schema](#meter-read-table-schema) or use the [Table Schema viewer](./table-schema-viewer.md).
 
 In the following example, we'll start by comparing the total counter between the start and end date, and adding a calculated column indicating the volume.
 
@@ -111,7 +111,7 @@ If we were set the billing date to be the end of month two (#2) then both the HP
 
 The Billing Period report allows you to configure the billing period (or contract date, or billing date, etc) for each device individually, and then view all the devices whose billing periods end on the selected billing date. It is an alternative to the Volume Analysis method of grouping device and meter data together that more closely reflects how device contracts are managed in the real-world.
 
-There are many available column names, to learn more about the schema design for meter reads, see [Meter Read Table Schema](#Meter Read Table Schema) or use the [Table Schema viewer](./table-schema-viewer.md).
+There are many available column names, to learn more about the schema design for meter reads, see [Meter Read Table Schema](#meter-read-table-schema) or use the [Table Schema viewer](./table-schema-viewer.md).
 
 ## Creating a Report
 To create a report
