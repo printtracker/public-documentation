@@ -1,0 +1,56 @@
+site_name: Print Tracker Documentation
+theme:
+  name: material
+  custom_dir: overrides
+
+nav:
+  - Overview: something.md
+  - Webadmin:
+      - Overview: webadmin/overview.md
+      - Concepts:
+          - Entities, Users, and Installs: webadmin/concepts/entities-users-and-installs.md
+          - Devices: webadmin/concepts/devices.md
+          - Settings: webadmin/concepts/settings.md
+      - Getting Started: something.md
+      - Jobs and DCAs: something.md
+      - Configuring Settings: something.md
+      - Reporting and Analysis:
+          - Overview: webadmin/reporting-and-analysis/overview.md
+          - Custom Reports: webadmin/reporting-and-analysis/custom-reports.md
+          - Table Schema Viewer: webadmin/reporting-and-analysis/table-schema-viewer.md
+  - Data Collection Agent:
+      - Overview: something.md
+      - How-to guides: something.md
+  - Best Practices:
+      - Fleet Management: best-practices/fleet-management.md
+  - Whitepapers:
+      - Data Collection Agent: something.md
+      - Remote Technician: something.md
+
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - admonition
+  - attr_list
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/open-sans.css
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
