@@ -1,6 +1,9 @@
 # Print Tracker Documentation
 This is the public documentation for Print Tracker. It is currently a work-in-progress. Any questions, clarifications, or suggestions can be submitted as GitHub issues.
 
+## Web Version
+Until its first release, the docs will be available at the GitHub pages URL https://printtracker.github.io/public-documentation/. After its first release, this documentation will be accessible at www.docs.printtrackerpro.com.
+
 ## Contributing
 Start by cloning this repository
 ```shell
