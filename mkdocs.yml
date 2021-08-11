@@ -11,9 +11,11 @@ nav:
           - Entities, Users, and Installs: webadmin/concepts/entities-users-and-installs.md
           - Devices: webadmin/concepts/devices.md
           - Settings: webadmin/concepts/settings.md
-      - Getting Started: something.md
-      - Jobs and DCAs: something.md
-      - Configuring Settings: something.md
+#      - Getting Started: something.md
+#      - Jobs and DCAs: something.md
+#      - Configuring Settings: something.md
+      - Billing Preferences:
+          - Billing Meters: webadmin/billing-preferences/billing-meters.md
       - Reporting and Analysis:
 #          - Overview: webadmin/reporting-and-analysis/overview.md
           - Custom Reports: webadmin/reporting-and-analysis/custom-reports.md

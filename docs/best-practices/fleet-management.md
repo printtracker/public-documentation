@@ -18,6 +18,6 @@ Devices are discovered using a combination of network ping and SNMP requests. Th
     \end{align}
 
     !!!note 
-        These number are the "worst case" scenario. If a device is at the IP address and does respond to both the ping and SNMP requests, the actual time spent at the IP addree may be much less the what was shown here.
+        These numbers are the "worst case" scenario. If a device is at the IP address and does respond to both the ping and SNMP requests, the actual time spent at the IP address may be much less the what was shown here.
     
     In other words, it will take 3s for the SNMP request and 3s for the ping request for each IP address. You should balance configuring the timeout and retry settings with ensuring that your device scans do not take longer then a few hours at most.
