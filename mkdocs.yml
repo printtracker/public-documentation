@@ -16,6 +16,8 @@ nav:
 #      - Configuring Settings: something.md
       - Billing Preferences:
           - Billing Meters: webadmin/billing-preferences/billing-meters.md
+      - Auto-fulfillment:
+          - Supplies Network: webadmin/auto-fulfillment/supplies-network.md
       - Reporting and Analysis:
 #          - Overview: webadmin/reporting-and-analysis/overview.md
           - Custom Reports: webadmin/reporting-and-analysis/custom-reports.md
