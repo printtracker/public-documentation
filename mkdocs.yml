@@ -15,6 +15,7 @@ nav:
 #      - Jobs and DCAs: something.md
 #      - Configuring Settings: something.md
       - Billing Preferences:
+          - Billing Schedule: webadmin/billing-preferences/billing-schedule.md
           - Billing Meters: webadmin/billing-preferences/billing-meters.md
       - Auto-fulfillment:
           - Supplies Network: webadmin/auto-fulfillment/supplies-network.md
@@ -25,14 +26,14 @@ nav:
       - Remote Technician:
           - Overview: webadmin/remote-technician/overview.md
           - Whitepaper: webadmin/remote-technician/whitepaper.md
-  - Data Collection Agent:
-      - Overview: something.md
-      - How-to guides: something.md
+#  - Data Collection Agent:
+#      - Overview: something.md
+#      - How-to guides: something.md
   - Best Practices:
       - Fleet Management: best-practices/fleet-management.md
-  - Whitepapers:
-      - Data Collection Agent: something.md
-      - Remote Technician: something.md
+#  - Whitepapers:
+#      - Data Collection Agent: something.md
+#      - Remote Technician: something.md
 
 
 markdown_extensions:
