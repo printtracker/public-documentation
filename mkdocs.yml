@@ -14,6 +14,8 @@ nav:
 #      - Getting Started: something.md
 #      - Jobs and DCAs: something.md
 #      - Configuring Settings: something.md
+      - Settings:
+          - Overview: webadmin/settings/overview.md
       - Billing Preferences:
           - Billing Schedule: webadmin/billing-preferences/billing-schedule.md
           - Billing Meters: webadmin/billing-preferences/billing-meters.md
