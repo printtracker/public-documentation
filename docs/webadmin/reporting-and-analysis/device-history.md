@@ -18,6 +18,7 @@ The device history query editor provides a powerful interface for viewing and ex
 * **Date range selector** is used to query for meter readings that were reported during a specified time period
 * [**Table schema viewer**](./table-schema-viewer.md) shows all the available column names that can be used in your queries
 * **Query editor** is used to edit the [SQLite compatible statements](https://www.sqlite.org/lang.html) that determine how your data is returned
+* **Query engine controls** allows you to run queries and view the results in the query results viewer or export the results to CSV. The gear button provides you with links to the SQLite documentation, as well as the ability to restart your query-engine if something isn't working right.
 * **Query results** shows the result of running your query
 
 ## Examples
@@ -40,8 +41,8 @@ ORDER BY timestamp DESC
 |2021-08-06 14:15:43|13053|8018       |5921       |
 |2021-08-05 14:28:30|13037|8002       |5919       |
 
-### Volume Over Time Using Window Functions
-Using a `LAG` function, we can look at volume over time by counter over time. We'll output the total values of each counter as well as the daily volume of that counter.
+### Volume Over Time Using `LAG` Function
+Using a `LAG` function, we can look at volume by counter over time. We'll output the total values of each counter as well as the daily volume for each counter.
 
 ```sql
 SELECT

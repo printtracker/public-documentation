@@ -1,12 +1,12 @@
-Custom reports allow you to design a build exportable reports using SQL queries. Print Tracker provides a set of pre-build SQL queries that should cover 95% of reporting scenarios. In the situations where you need more advanced flexibility, you can harness the power of SQL to create the exact report you're looking for.
+Custom reports allow you to design a build exportable reports using SQL queries. Print Tracker provides a set of pre-build SQL queries that should cover most reporting requirements. In the situations where you need more advanced flexibility, you can harness the power of SQL to create exactly what you're looking for.
 
-A report can be one of several report types. The report type determines the type of data that is available for use in the report. We'll go into each of these report types in detail later on.
+A report can be one of several report types. The report type determines the type of data that is available for use in the report. We'll go into each of these report types in detail shortly.
 
 * [Device](#device) - Returns information about devices such as the make, model, serial number, IP address, mac address, asset ID, location, notes, entity name and latest meter read timestamp. This report type is useful for getting information about your fleet of devices.
 * [Current Meter](#current-meter) - Returns the previously mentioned device information along with columns for the most recent meter read of the device. To learn more about the schema design for meter reads, see [Meter Read Table Schema](#meter-read-table-schema).
 * [Volume Analysis](#volume-analysis) - Returns the previously mentioned device information along with columns for the first meter and last meter reads in a specified date range. This report is useful for comparing the volume changes in different meters over time.
 * [Billing Period](#billing-period) - Returns the same information as the Volume Analysis report but allows the user to specify a single billing date. All devices that have been configured to bill on the specified date will be returned in the report.
-
+* [Device History](device-history.md) - This report type is only accessible on a per-device basis. We will not cover this report type in this section, for more details and how to use it, see [Viewing Device History](device-history.md#viewing-device-history).
 
 ## Report Types
 ### Device
@@ -119,27 +119,27 @@ To create a report
 1. Navigate to the **Insights > Reports** page using the sidebar.
 2. Click **New Report** and give the report a name, for example **"My Volume Analysis"**.
 3. Click on the new row in the reports list that was just added. You can customize the name or description of the report in the top-left corner of the "Configuration" tab.
-
-Let's pause for a moment and review the different parts of the custom reports editor starting in the top-left corner/
-
-  * **Report configuration** allows you to configure metadata about the report for your own organizational purposes (name and description), as well as how the report itself should behave. You can configure the [report type](#report-types) and whether the report should include children or not. Reports that include children will include data from the current entity and all children entities.
-  * **Query editor** comes with pre-built queries for each report type. Any [SQLite-compatible statements](https://www.sqlite.org/lang.html) can be used in this editor. You can use the "Run" button to test your query on a small sample of your full dataset, or "Export" your full dataset using the provided query. It gives you full control over things like:
-      * Column names
-      * Calculated columns
-      * Aggregations and sorting
-      * Filtering
-  * **[Table Schema viewer](./table-schema-viewer.md)** allows you to view all the available columns and column types that can be used in your query.
-  * **Query result** is a table containing a small sample of your full dataset after being processed using your query. It should give you an idea of what the exported data will look like.
-  * The save button in the button right-hand corner must be clicked everytime you're finished making changes.
-
-![](../images/new-reports-report-editor.png)
-
 4. Click **Report Type** and select **"Volume Analysis"**. This will populate a default volume analysis query in the query editor.
 
-    ![](../images/new-report-report-type.png){: style="width:400px"}
+[comment]: <> (    ![]&#40;../images/new-report-report-type.png&#41;{: style="width:400px"})
 
 5. Click **Run** to output a sample of the pre-built query.
 6. Click **Export** to export a CSV file containing the full dataset. Because the CSV export uses the full dataset, it often takes longer then just clicking Run.
+
+### Report Editor
+Let's pause for a moment and review the different parts of the custom reports editor starting in the top-left corner.
+
+* **Report configuration** allows you to configure metadata about the report for your own organizational purposes (name and description), as well as how the report itself should behave. You can configure the [report type](#report-types) and whether the report should include children or not. Reports that include children will include data from the current entity and all children entities.
+* **Query editor** comes with pre-built queries for each report type. Any [SQLite-compatible statements](https://www.sqlite.org/lang.html) can be used in this editor. You can use the "Run" button to test your query on a small sample of your full dataset, or "Export" your full dataset using the provided query. It gives you full control over things like:
+    * Column names
+    * Calculated columns
+    * Aggregations and sorting
+    * Filtering
+* **[Table Schema viewer](./table-schema-viewer.md)** allows you to view all the available columns and column types that can be used in your query.
+* **Query result** is a table containing a small sample of your full dataset after being processed using your query. It should give you an idea of what the exported data will look like.
+* The save button in the button right-hand corner must be clicked everytime you're finished making changes.
+
+![](../images/new-reports-report-editor.png)
 
 ## Scheduling a Report
 Any report can be automatically emailed on a pre-defined schedule. You can create any number of schedules for a single report. Each schedule can be completely customized for a specific entity and contain custom email subject line and body text. You can even use template variables

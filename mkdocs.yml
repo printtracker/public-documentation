@@ -5,7 +5,7 @@ theme:
 
 nav:
   - Overview: something.md
-  - Webadmin:
+  - Web Admin:
       - Overview: webadmin/overview.md
       - Concepts:
           - Entities, Users, and Installs: webadmin/concepts/entities-users-and-installs.md
@@ -20,8 +20,8 @@ nav:
       - Auto-fulfillment:
           - Supplies Network: webadmin/auto-fulfillment/supplies-network.md
       - Reporting and Analysis:
-          - Device History: webadmin/reporting-and-analysis/device-history.md
           - Custom Reports: webadmin/reporting-and-analysis/custom-reports.md
+          - Device History: webadmin/reporting-and-analysis/device-history.md
           - Table Schema Viewer: webadmin/reporting-and-analysis/table-schema-viewer.md
       - Remote Technician:
           - Overview: webadmin/remote-technician/overview.md
