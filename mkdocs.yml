@@ -11,6 +11,8 @@ nav:
           - Entities, Users, and Installs: webadmin/concepts/entities-users-and-installs.md
           - Devices: webadmin/concepts/devices.md
           - Settings: webadmin/concepts/settings.md
+          - Roles and Permissions: webadmin/concepts/roles-and-permissions.md
+          - Jobs and Tasks: webadmin/concepts/jobs-and-tasks.md
 #      - Getting Started: something.md
 #      - Jobs and DCAs: something.md
 #      - Configuring Settings: something.md
@@ -28,9 +30,11 @@ nav:
       - Remote Technician:
           - Overview: webadmin/remote-technician/overview.md
           - Whitepaper: webadmin/remote-technician/whitepaper.md
-#  - Data Collection Agent:
-#      - Overview: something.md
-#      - How-to guides: something.md
+  - Data Collection Agent:
+      - Whitepaper: dca/whitepaper.md
+  - API:
+      - Endpoints: api/endpoints.md
+      - Types: api/types.md
   - Best Practices:
       - Fleet Management: best-practices/fleet-management.md
 #  - Whitepapers:
