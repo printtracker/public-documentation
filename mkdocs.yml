@@ -4,7 +4,6 @@ theme:
   custom_dir: overrides
 
 nav:
-  - Overview: something.md
   - Web Admin:
       - Overview: webadmin/overview.md
       - Concepts:
