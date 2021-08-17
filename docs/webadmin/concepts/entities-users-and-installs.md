@@ -10,7 +10,7 @@ Some people may choose to use entity hierarchy to provide logic groupings of ent
 ![](../images/entity-hierarchy-logical-grouping.png)
 
 ## User
-A user is a person that has been granted specific roles and permissions to operate within an entity and any of that entity's children. A user belongs to a single entity but has access to the child-hierarchy of the entity to which the user belongs. Users can be anyone from the administrator that setup Print Tracker in the first place, to the field technician responsible for setting up installs (DCAs) and on-boarding new customers.
+A user is a person that has been granted specific roles and permissions to operate within an entity and any of that entity's children. A user belongs to a single entity but has access to the child-hierarchy of the entity to which the user belongs. Users can be anyone from the administrator that setup Print Tracker in the first place, to the field technician responsible for setting up installs (DCAs) and on-boarding new customers, to the end-user who would like to log in and see their own devices
 
 In the following example, Mary is an administrator at the dealership level, this means she not only has access to the "My Dealer" entity, but also all of the entities below the dealership (in this case "End Customer #1" and "End Customer #2"). John on the other hand is a field technician at "End Customer #2", he does not have permission to see "End Customer #1 or "My Dealer".
 ![](../images/entity-hierarchy-users.png)
