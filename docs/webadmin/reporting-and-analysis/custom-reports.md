@@ -41,6 +41,9 @@ ORDER BY count DESC
 |HP   |LaserJet Pro M404dn|3    |
 |HP   |LaserJet M402n     |3    |
 
+[comment]: <> (### Install)
+
+[comment]: <> (This report type can be used to return basic information about your fleet of installs, for example, the following query returns the hostname, operating system, and last check in date for each install.)
 
 ### Current Meter
 In a normal scenario, an install will collect a meter read from a device every day. This report type allows you to view the most recent meter read collected for this device. There are many available column names, to learn more about the schema design for meter reads, see [Meter Read Table Schema](#meter-read-table-schema) or use the [Table Schema viewer](./table-schema-viewer.md).
@@ -164,6 +167,11 @@ Different [report types](#report-types) accept different customizations, for exa
 
 * Let's assume we've created a volume analysis report that is scheduled for the first day of every month. On February 1st, the volume analysis report will be created with a start date of January 1st and an end date of February 1st. The date range ends on the date of the scheduled report (February 1st) and starts at the previous intervals end-date (January 1st).
 * Let's assume we've created a billing period report that is scheduled for every day. On February 1st, the billing period report will be created with a billing date of February 1st. On February 2nd, the billing period report will be created with a billing date of February 2nd, and so on.
+
+#### SQL `WHERE` Clause
+SQLite supports using the `WHERE` keyword to perform advanced filtering predicates. Keep in mind that the report editor takes a [sample of the full dataset](#report-editor), this means that the filtering predicates you apply using SQL `WHERE` clauses may not return any results if the smaller sampled dataset does not have any rows that match the `WHERE` predicate. You might also find that because the full dataset is randomly sampled everytime you start working on a new report, the results of your query may differ between query executions.
+
+This problem does not apply to exported reports because they do not take a random sample of the dataset, rather exported reports perform your query on the dataset as a whole. This means that query executions are deterministic and if no rows are returned, there simply isn't a row in your dataset that matches your `WHERE` predicate.
 
 ## Meter Read Table Schema
 The meter read follows a hierarchical pattern for organizing related page counts and supplies. The hierarchy looks something like this. Some meter reads contain much less data (sometimes only the total counter), and some meter reads contain much more data. You can always refer to the [Table Schema viewer](./table-schema-viewer.md) to view all the available columns. Devices that do not support certain properties will return `nulls` in these columns (or empty values when exported to CSV). 
