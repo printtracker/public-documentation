@@ -5,7 +5,9 @@ Roles and permissions determine the scope of allowed actions each user can perfo
 |View user details|X|X|X|X|||
 |Download Print Tracker installer|X|X|X|X|||
 |View alerts|X|X|X|X|||
-|Include children toggle on "View devices"|X|X|X||||
+|View devices|X|X|X|X|||
+|Include children toggle on "View devices"|X|X|X|X|||
+|View new devices|X|X|X||||
 |Bulk actions on "View devices"|X|X|X||||
 |Bulk update alert status|X|X|X||||
 |Update alert status|X|X|X||||
