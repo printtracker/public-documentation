@@ -30,6 +30,7 @@ nav:
           - Overview: webadmin/remote-technician/overview.md
           - Whitepaper: webadmin/remote-technician/whitepaper.md
   - Data Collection Agent:
+      - Setup & Registration: dca/setup.md
       - Whitepaper: dca/whitepaper.md
   - API:
       - Endpoints: api/endpoints.md
@@ -48,6 +49,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed
   - pymdownx.details
+  - def_list
   - admonition
   - attr_list
   - footnotes
