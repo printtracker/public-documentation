@@ -32,6 +32,8 @@ nav:
   - Data Collection Agent:
       - Setup & Registration: dca/setup.md
       - Whitepaper: dca/whitepaper.md
+  - Data Processor:
+      - Overview: dataprocessor/overview.md
   - API:
       - Endpoints: api/endpoints.md
       - Types: api/types.md
