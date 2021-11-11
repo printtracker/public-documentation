@@ -20,7 +20,7 @@ Setting up a data processor involves scheduling a Zoom meeting with one of our t
 ### Self-hosted E-Automate
 1. Setup a computer or virtual machine to run the data processor.
 2. Make sure that the E-Automate SQL server is accessible from this computer or virtual machine.
-3. Obtain SQL Server credentials to the E-Automate SQL server. 
+3. Obtain [SQL Server credentials](#sql-server-credentials) to the E-Automate SQL server. 
 4. Create a SQL user account with `EXEC` permissions for the data processor. If you have questions about this, don't worry, we can use an existing SQL user account, or we can help you create one during the setup call.
 5. Create an E-Automate meter source.
 
@@ -29,5 +29,13 @@ Connecting a data processor to a cloud-hosted instance of E-Automate usually req
 
 1. Make sure that the E-Automate SQL server is accessible from this computer or virtual machine.
 2. Obtain a SQL user account with `EXEC` permissions for the data processor from ECi.
-3. Obtain SQL Server credentials to the E-Automate SQL server. These will usually be provided by ECi.
+3. Obtain [SQL Server credentials](#sql-server-credentials) to the E-Automate SQL server. These will usually be provided by ECi.
 4Create an E-Automate meter source
+
+### SQL Server Credentials
+The following SQL server credentials are required for the data processor to connect to E-Automate:
+* Hostname (or IP address) of the E-Automate SQL server
+* Port
+* Database name
+* Username
+* Password
