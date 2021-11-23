@@ -30,6 +30,7 @@ nav:
           - Overview: webadmin/remote-technician/overview.md
           - Whitepaper: webadmin/remote-technician/whitepaper.md
   - Data Collection Agent:
+      - System Requirements: dca/system-requirements.md
       - Setup & Registration: dca/setup.md
       - Whitepaper: dca/whitepaper.md
   - Data Processor:
