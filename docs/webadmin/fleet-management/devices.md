@@ -1,7 +1,7 @@
-# Discovery and Management
+## Discovery and Management
 Fleet management starts with discovering devices. Devices are discoverable if they are located on a network accessible to your [install](../concepts/entities-users-and-installs.md#install) (on the same network, VPN access to the network, etc). For more information on what is required in order to discover a device, see [devices](../concepts/devices.md#networked-devices).
 
-## Discovering Devices
+### Discovering Devices
 To scan your network for devices:
 
 1. Using the sidebar, click **Devices > View Devices**.
@@ -15,10 +15,10 @@ To scan your network for devices:
 6. Click **Add devices**.
 7. A list will open that asks which install you want to use to run the scan. In most cases, you can just stick with the default selected install (if there is only one install at the entity).
 
-## Tracking Status
+### Tracking Status
 If a device's tracking status is enabled, the device is considered a "managed" device and Print Tracker will charge you for it. If the tracking status is disabled, the device is considered a "non-managed" device. You can set the tracking status in several, different ways, however in the next section, we'll talk about un-managing newly discovered devices.
 
-## Viewing New Devices
+### Viewing New Devices
 The "View devices" page lets you see all devices that have been discovered by your install, however in some cases it's helpful only to see the devices that have recently been discovered, for example you may want to keep an eye on newly discovered devices so that you can un-manage the ones that you don't care about tracking. The "New devices" page allows you to view recently discovered devices and optionally un-manage them before Print Tracker begins to bill you for them. This list contains devices that have been discovered within the last 30 days.
 
 !!! warning
@@ -30,13 +30,13 @@ The "View devices" page lets you see all devices that have been discovered by yo
       2. Click on the blue hyperlink **Enabled**.
       3. Select **Disable**. If the device's **First billing date** is in the past, you will be billed for the current billing period, but not subsequent billing periods. If the device's **First billing date** is in the future (and highlighted orange) then you will not be billed for this device at all.
 
-# Meter Collection
+## Meter Collection
 After a device has been discovered, you can collect and upload meters from it.
 
-## Uploading Meters
+### Uploading Meters
 By default, managed devices will upload meters every 24 hours within a configurable window. You can optionally request a meter upload for a single device or for all your devices at a single customer on-demand.
 
-### Single Device
+#### Single Device
 To upload meters for a single device:
 
 1. Using the sidebar, click **Devices > View devices**.
@@ -47,7 +47,7 @@ To upload meters for a single device:
 
 ![](../images/devices-upload-selected.png)
 
-### All Devices
+#### All Devices
 
 !!! info
       Upload meters for all devices does not take hierarchy into account. For example, you cannot click **Upload meters** at your dealer level and expect meters to be uploaded from all of your customers. Meters will only be uploaded from the installs that are at your selected entity.
@@ -57,7 +57,7 @@ To upload meters for all devices at a single customer:
 1. Using the sidebar, click **Devices > View devices**.
 2. Click the **Upload meters** button.
 
-### Changing the Upload Window
+#### Changing the Upload Window
 You can customize what time of day meters should be collected and uploaded using six-hour increments. You can customize this setting on a dealer, entity, or install level. In this example, we'll show you how to set this setting at the entity level (for all installs at a single entity).
 
 !!! info
@@ -68,7 +68,7 @@ You can customize what time of day meters should be collected and uploaded using
 3. Expand the **Data Collection Agent** section.
 4. Click **Upload daily meter read** and specify which time of the day you want meters uploaded.
 
-## Device Collection Status
+### Device Collection Status
 Every install reports the status of its meter collections for each device. These statuses can help you identify why a device may not be reporting. The following grid illustrates a set of steps followed when uploading meters and the outcome of each step.
 
 ![](../images/install-device-collection-status.png)
@@ -91,10 +91,10 @@ The table contains device information as well as several key processes that occu
 * **Meter Uploaded** - Ensures that the meter is uploaded successfully to the cloud where it is viewable by you.
 * **Cleanup** - Old historical meter reads are removed from the database in order to optimize performance.
 
-# Cleanup
+## Cleanup
 In some cases you may need to remove devices that have been de-commissioned and are no longer on the network, or you may need to mark a device as non-managed because it is no longer under contract. Whether you should remove or un-manage a device depends on your use-case. Devices that are removed could potentially be re-discovered. You should only remove a device if it no longer exists on the network. If a device still exists on the network, but you want to hide the device, you should un-manage the device rather than removing it.
 
-## Removing a Device
+### Removing a Device
 Removing a device deletes a device and all of its history from Print Tracker. This operation is irreversible.
 
 1. Using the sidebar, click **Devices > View devices**.
@@ -105,7 +105,7 @@ Removing a device deletes a device and all of its history from Print Tracker. Th
 
 ![](../images/devices-bulk-remove.png)
 
-## Disabling a Device
+### Disabling a Device
 Disabling a device prevents daily meters from being uploaded and prevents you from being charged for the device.
 
 1. Using the sidebar, click **Devices > View devices**.
