@@ -22,6 +22,8 @@ nav:
           - Billing Meters: webadmin/billing-preferences/billing-meters.md
       - Auto-fulfillment:
           - Supplies Network: webadmin/auto-fulfillment/supplies-network.md
+      - Fleet Management:
+          - Devices: webadmin/fleet-management/devices.md
       - Reporting and Analysis:
           - Custom Reports: webadmin/reporting-and-analysis/custom-reports.md
           - Device History: webadmin/reporting-and-analysis/device-history.md
