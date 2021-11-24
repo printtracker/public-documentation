@@ -34,6 +34,7 @@ Connecting a data processor to a cloud-hosted instance of E-Automate usually req
 
 ### SQL Server Credentials
 The following SQL server credentials are required for the data processor to connect to E-Automate:
+
 * Hostname (or IP address) of the E-Automate SQL server
 * Port
 * Database name
