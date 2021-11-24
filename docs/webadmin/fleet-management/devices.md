@@ -115,3 +115,12 @@ Disabling a device prevents daily meters from being uploaded and prevents you fr
 5. Select **Disable selected**.
 
 ![](../images/devices-bulk-disable.png)
+
+### Hiding Disabled Devices
+Devices that are non-managed can still be viewed on the "View devices" page. You can hide these devices by:
+
+1. Using the sidebar, click **Devices > View devices**.
+2. Click on the **filter icon** on the top-right side of the devices table.
+3. Click **Exclude disabled** to hide the non-managed devices.
+
+![](../images/devices-hide-disabled.png)
