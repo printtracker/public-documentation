@@ -5,7 +5,7 @@ Many of the following system requirements depend on the number of devices that a
 
 ||Minimum|Recommended|
 |--|--|--|
-|Operating System|Windows||
+|Operating System|Windows[^1]||
 |CPU|1GHz x 2 cores|3GHz x 4 cores|
 |Memory|500MB|4GB|
 |Disk|2GB HDD|10GB SSD|
@@ -20,7 +20,9 @@ Data collection requires internet connectivity in order for meters and alerts to
 
 |Domain|Protocol|Purpose|
 |--|--|--|
-|dcam.printtrackerpro.com|HTTP/2|Allows data collection agents to receive jobs, upload meters, and fire alerts.|
-|csr.printtrackerpro.com|HTTP/2|Allows data collection agents to register under entities that you configure.|
-|hc.printtrackerpro.com|HTTP|Allows data collection agents to report their health status.|
-|remotetechnician.printtrackerpro.com:6000|Proprietary|Allows authenticated users to remotely access device embedded webservers if the feature is enabled.|
+|dcam.printtrackerpro.com`:443`|gRPC (uses HTTP/2 as a transport)|Allows data collection agents to receive jobs, upload meters, and fire alerts.|
+|csr.printtrackerpro.com`:443`|gRPC (uses HTTP/2 as a transport)|Allows data collection agents to register under entities that you configure.|
+|hc.printtrackerpro.com`:443`|HTTP|Allows data collection agents to report their health status.|
+|remotetechnician.printtrackerpro.com`:6000`|Proprietary|Allows authenticated users to remotely access device embedded webservers if the feature is enabled.|
+
+[^1]: Print Tracker Pro runs on all versions of Windows that are actively supported by Microsoft and have not reached end-of-life.
