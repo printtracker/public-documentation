@@ -9,6 +9,7 @@ Many of the following system requirements depend on the number of devices that a
 |CPU|1GHz x 2 cores|3GHz x 4 cores|
 |Memory|500MB|4GB|
 |Disk|2GB HDD|10GB SSD|
+|Browser|<ul><li>Microsoft Edge</li><li>Mozilla Firefox</li><li>Google Chrome</li></ul>||
 |Other Considerations|The data collection agent should not be installed on a laptop or any other machine that frequently shuts down, or the reliability may be affected.||
 
 ## Network Requirements
