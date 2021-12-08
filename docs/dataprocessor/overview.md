@@ -12,6 +12,7 @@ Integrations with E-Automate require that the data processor is installed on a m
 |CPU|2.5GHz x 2 cores|3GHz x 8 cores|
 |Memory|4GB|16GB|
 |Disk|10GB HDD|10GB SSD|
+|Browser|<ul><li>Microsoft Edge</li><li>Mozilla Firefox</li><li>Google Chrome</li></ul>||
 |Other Considerations|The data processor should not be installed on a laptop or any other machine that frequently shuts down, or the reliability may be affected||
 
 ## Pre-requisites
