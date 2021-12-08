@@ -34,7 +34,7 @@ You can easily pick which formats and counters you care about for a device.
 3. Click the **Settings** tab
 4. Click on the **Billing Preferences** accordion
 
-### Billing meters editor
+### Billing Meters Editor
 The billing meters editor allows you to pick the format and counter preferences for a device. A device may only have one format preference. If you configure multiple format preferences, the preference that occurs first and is reported by the device is set as the only default format going forward; all other formats are removed from the list.
 
 ![](../images/billing-preferences-billing-meters.png)
@@ -61,3 +61,6 @@ In some situations such as when a device's motherboard has been replaced, you ma
 After hitting **Enter**, the offset will be applied to only the counter you selected. This offset will be reflected in all the default custom reports, the device overview page, and in your ERP if you're using a data-processor that supports offset meters (such as E-Automate).
 
 ![](../images/billing-preferences-offset-counter.png){: style="width:200px"}
+
+### Billing Meters and Settings Inheritance
+Billing meters are unique from other settings because they can have a serious impact on the accuracy of your reporting and billing. While billing meter preferences can be configured at the entity-level, as soon as a device reports its first meter, the billing preferences used will be locked in for the device and any changes to the billing preferences in your hierarchy will no longer affect the billing preferences used for the device. This prevents an unsuspecting user from changing billing preferences and impacting the meters reported for your entire fleet.
