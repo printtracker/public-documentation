@@ -37,6 +37,7 @@ nav:
       - Whitepaper: dca/whitepaper.md
   - Data Processor:
       - Overview: dataprocessor/overview.md
+      - Meters: dataprocessor/meters.md
   - API:
       - Endpoints: api/endpoints.md
       - Types: api/types.md
