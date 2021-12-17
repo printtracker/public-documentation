@@ -8,7 +8,7 @@ To scan your network for devices:
 2. In the top, left corner click **Scan for devices**.
 3. Enter an IP address of a known device. You may also provide:
       1. Wildcard such as 10.0.0.* which would scan IP addresses 10.0.0.0-10.0.0.255.
-      2. Range such as 10.0.0.1-10.0.0.10 which would scan the first 10 IP addresses of the 10.0.0.* subnet.
+       2. Range such as 10.0.0.1-10 which would scan the first 10 IP addresses of the 10.0.0.* subnet.
       3. CIDR notation such as 10.0.0.0/24 which would scan IP addresses 10.0.0.0-10.0.0.255.
 4. Optionally exclude specific IP addresses that should not be scanned (this is not required, however for some sensitive networks you may prefer to exclude servers or networking hardware).
 5. Optionally click **Upload meters from devices** if you would like to immediately upload meters for devices that you have discovered (note that meter uploads can take a long time, you may want to do this later after you've discovered all the devices you're looking for).
