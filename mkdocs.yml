@@ -34,6 +34,7 @@ nav:
   - Data Collection Agent:
       - System Requirements: dca/system-requirements.md
       - Setup & Registration: dca/setup.md
+      - Troubleshooting: dca/troubleshooting.md
       - Whitepaper: dca/whitepaper.md
   - Data Processor:
       - Overview: dataprocessor/overview.md
