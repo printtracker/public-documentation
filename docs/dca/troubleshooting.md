@@ -6,7 +6,7 @@ The following tips and tricks should help you address situations where an instal
 In some cases, the installer will fail to install Print Tracker Pro with the following error message, "There is a problem with windows installer package.  A program run as part of this setup did not finish as expected."
 
 1. Determine if your host machine or network requires proxy settings to connect to the internet. The [following resource from Stack Overflow](https://stackoverflow.com/questions/22368515/how-to-see-the-proxy-settings-on-windows/46183424) may be helpful in identifying whether your system currently has configured proxy settings.
-2. If proxy settings are in use, try using our [offline installer](https://storage.googleapis.com/printtracker-assets-bucket/modules/dca/2.35.0/PrintTrackerProSetup.msi).
+2. If proxy settings are in use, try using our [offline installer](https://www.cdn.printtrackerpro.com/modules/installer/PrintTrackerProOfflineSetup.msi).
 
 ## Falling offline
 In some cases, an install may fall offline after the initial installation and registration.
