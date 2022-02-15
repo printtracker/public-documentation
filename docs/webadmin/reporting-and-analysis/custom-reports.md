@@ -6,6 +6,7 @@ A report can be one of several report types. The report type determines the type
 * [Current Meter](#current-meter) - Returns the previously mentioned device information along with columns for the most recent meter read of the device. To learn more about the schema design for meter reads, see [Meter Read Table Schema](#meter-read-table-schema).
 * [Volume Analysis](#volume-analysis) - Returns the previously mentioned device information along with columns for the first meter and last meter reads in a specified date range. This report is useful for comparing the volume changes in different meters over time.
 * [Billing Period](#billing-period) - Returns the same information as the Volume Analysis report but allows the user to specify a single billing date. All devices that have been configured to bill on the specified date will be returned in the report.
+* [Estimated Depletion (On-demand)](#estimated-depletion-on-demand) - Returns a list of devices and the estimated depletion dates for their supplies.
 * [Device History](device-history.md) - This report type is only accessible on a per-device basis. We will not cover this report type in this section, for more details and how to use it, see [Viewing Device History](device-history.md#viewing-device-history).
 
 ## Report Types
@@ -115,6 +116,33 @@ If we were set the billing date to be the end of month two (#2) then both the HP
 The Billing Period report allows you to configure the billing period (or contract date, or billing date, etc) for each device individually, and then view all the devices whose billing periods end on the selected billing date. It is an alternative to the Volume Analysis method of grouping device and meter data together that more closely reflects how device contracts are managed in the real-world.
 
 There are many available column names, to learn more about the schema design for meter reads, see [Meter Read Table Schema](#meter-read-table-schema) or use the [Table Schema viewer](./table-schema-viewer.md).
+
+### Estimated Depletion (On-demand)
+!!!warning "On-demand"
+    This report performs estimated depletion calculations by analyzing 95-days worth of meter history on demand which can cause this report to take longer to process than other report.
+
+The estimated depletion report can be used to get estimated depletion dates for black, cyan, magenta, yellow toners and inks. The calculations rely on historical printing patterns using meters collected within the last 95 days. If printing patterns are volatile, then the estimated depletion dates will likely be unreliable. This report does not currently support including children.
+
+#### Time Stipulations
+You can customize the query to return only devices that have at least one supply that is expected to deplete within a certain timeframe. For example, if we wanted to only see devices that are expected to run out of at least one supply within the next two weeks, we can add this where clause to our query.
+
+```sql
+SELECT make as Make,
+    model as Model,
+    serial_number as 'Serial Number',
+    asset_id as 'Asset ID',
+    ip_address as 'IP Address',
+    DATETIME(latest_meter_timestamp) as 'Latest Meter Timestamp',
+    DATE(estimated_depletion_black_toner) as 'Black Toner Depletion',
+    DATE(estimated_depletion_cyan_toner) as 'Cyan Toner Depletion',
+    DATE(estimated_depletion_magenta_toner) as 'Magenta Toner Depletion',
+    DATE(estimated_depletion_yellow_toner) as 'Yellow Toner Depletion'
+FROM device_estimated_depletion_on_demand
+WHERE DATE(estimated_depletion_black_toner) < DATE('now', '+14 days')
+    OR DATE(estimated_depletion_cyan_toner) < DATE('now', '+14 days')
+    OR DATE(estimated_depletion_magenta_toner) < DATE('now', '+14 days')
+    OR DATE(estimated_depletion_yellow_toner) < DATE('now', '+14 days')
+```
 
 ## Creating a Report
 To create a report
