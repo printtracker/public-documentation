@@ -101,6 +101,40 @@ Returns an array of meter reads for the specified entity.
 
     An array of [Meter Read](types.md#meter-read) objects
 
+## `GET` Get Current Meters by Entity
+
+**`GET`** `https://papi.printtrackerpro.com/v1/entity/:entityID/currentMeter`
+
+Returns an array of current meter reads for all devices at the specified entity. If `includeChildren` is enabled and provided in the query string, this endpoint will return the current meter reads for all devices at the provided entity and any children of the provided entity. This endpoint is paginated, and the caller should pass a page and limit to paginate all the results from the endpoint.
+
+=== "Request"
+
+    === "Parameters"
+
+        **Path Parameters**
+        
+        - `entityID` `string` - The ID of the entity
+    
+        **Headers**
+    
+        - `x-api-key` - Your Print Tracker API key
+    
+        **Query Parameters**
+    
+        - `includeChildren` `bool` - Whether the response should include current meters from devices at children of this entity.
+        - `page` `int` - The pagination page that you want to return data for.
+        - `limit` `int` - The number of results in the pagination page. If the number of results is less than the limit, then you know you've retrieved all available meter reads.
+    
+    === "cURL"
+
+        ```shell
+        $ curl --location --request GET 'localhost:8080/v1/entity/<ENTITY-ID-HERE>/currentMeter?includeChildren=true&page=1&limit=100' --header 'x-api-key: <API-KEY-HERE>'
+        ```
+
+=== "Response"
+
+    An array of [Meter Read](types.md#meter-read) objects
+
 ---
 
 ## `GET` Get Meters by Device
@@ -130,7 +164,7 @@ Returns an array of meter reads for the specified device.
     === "cURL"
 
         ```shell
-        $ curl --location --request GET 'https://papi.printtrackerpro.com/v1/entity/5ff74100f8c03a0a7da0c4a6/device/<ENTITY-ID-HERE>/meter?start=2021-01-08T17:52:52.417Z&end=2021-01-25T17:52:52.417Z' --header 'x-api-key: <API-KEY-HERE>'
+        $ curl --location --request GET 'https://papi.printtrackerpro.com/v1/entity/<ENTITY-ID-HERE>/device/<DEVICE-ID-HERE>/meter?start=2021-01-08T17:52:52.417Z&end=2021-01-25T17:52:52.417Z' --header 'x-api-key: <API-KEY-HERE>'
         ```
 
 === "Response"
