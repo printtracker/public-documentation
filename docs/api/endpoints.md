@@ -55,6 +55,7 @@ Returns an array of devices that belong to the specified entity and (optionally)
         - `includeChildren` `boolean` _optional_ - Defaults to false, determines whether we should return devices at the provided `entityID` and all children entities or just the provided `entityID`.
         - `limit` `number` _optional_ - Defaults to 100, determines the maximum number of devices in the response array.
         - `page` `number` _optional_ - Defaults to 1, determines the paginator's current page for the request.
+        - `excludeDisabled` `bool` - If enabled, only devices whose tracking status is 'Enabled' will be included in the final result.
     
     === "cURL"
 
@@ -90,6 +91,7 @@ Returns an array of meter reads for the specified entity.
     
         - `start` `date` - The start of the meter read date range formatted as RFC3339, ISO8601 (without timezone), RFC1123Z, RFC1123, RFC1123, RFC822Z, RFC822, RFC8250, ANSIC, or Unix.
         - `end` `date` - The end of the meter read date range formatted as RFC3339, ISO8601 (without timezone), RFC1123Z, RFC1123, RFC1123, RFC822Z, RFC822, RFC8250, ANSIC, or Unix.
+        - `excludeDisabled` `bool` - If enabled, only meters from devices whose tracking status is 'Enabled' will be included in the final result.
     
     === "cURL"
 
@@ -122,9 +124,10 @@ Returns an array of current meter reads for all devices at the specified entity.
         **Query Parameters**
     
         - `includeChildren` `bool` - Whether the response should include current meters from devices at children of this entity.
+        - `excludeDisabled` `bool` - If enabled, only meters from devices whose tracking status is 'Enabled' will be included in the final result. 
         - `page` `int` - The pagination page that you want to return data for.
         - `limit` `int` - The number of results in the pagination page. If the number of results is less than the limit, then you know you've retrieved all available meter reads.
-    
+
     === "cURL"
 
         ```shell
