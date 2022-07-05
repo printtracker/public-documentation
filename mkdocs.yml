@@ -17,6 +17,8 @@ nav:
 #      - Configuring Settings: something.md
       - Settings:
           - Overview: webadmin/settings/overview.md
+      - Installation & Registration:
+          - Overview: webadmin/setup-and-installation/overview.md
       - Billing Preferences:
           - Billing Schedule: webadmin/billing-preferences/billing-schedule.md
           - Billing Meters: webadmin/billing-preferences/billing-meters.md
@@ -33,7 +35,7 @@ nav:
           - Whitepaper: webadmin/remote-technician/whitepaper.md
   - Data Collection Agent:
       - System Requirements: dca/system-requirements.md
-      - Setup & Registration: dca/setup.md
+      - Setup & Registration: dca/installation-and-registration.md
       - Troubleshooting: dca/troubleshooting.md
       - Whitepaper: dca/whitepaper.md
   - Data Processor:
