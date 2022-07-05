@@ -92,9 +92,12 @@ The table contains device information as well as several key processes that occu
 * **Cleanup** - Old historical meter reads are removed from the database in order to optimize performance.
 
 ## Cleanup
-In some cases you may need to remove devices that have been de-commissioned and are no longer on the network, or you may need to mark a device as non-managed because it is no longer under contract. Whether you should remove or un-manage a device depends on your use-case. Devices that are removed could potentially be re-discovered. You should only remove a device if it no longer exists on the network. If a device still exists on the network, but you want to hide the device, you should un-manage the device rather than removing it.
+In some cases you may need to remove devices that have been de-commissioned and are no longer on the network, or you may need to mark a device as non-managed because it is no longer under contract. Whether you should remove or un-manage a device depends on your use-case. Devices that are removed could potentially be re-discovered. You should only remove a device if it no longer exists on the network. If a device still exists on the network, but you want to hide the device, you should disable tracking on the device rather than removing it.
 
 ### Removing a Device
+!!!warning "Removing a Device"
+    You should only remove a device if it no longer exists on the network. If a device still exists on the network, but you want to hide the device, you should disable tracking on the device rather than removing it.
+
 Removing a device deletes a device and all of its history from Print Tracker. This operation is irreversible.
 
 1. Using the sidebar, click **Devices > View devices**.
@@ -105,8 +108,8 @@ Removing a device deletes a device and all of its history from Print Tracker. Th
 
 ![](../images/devices-bulk-remove.png)
 
-### Disabling a Device
-Disabling a device prevents daily meters from being uploaded and prevents you from being charged for the device.
+### Disabling Tracking on a Device
+Disabling tracking on a device prevents daily meters from being uploaded and prevents you from being charged for the device.
 
 1. Using the sidebar, click **Devices > View devices**.
 2. Find the device or devices that you want to remove in the list of devices.
