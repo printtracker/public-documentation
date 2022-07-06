@@ -3,7 +3,7 @@ You can install and register an install in two different ways:
 1. [Customer deployment email](#customer-deployment-email) - You send a deployment email from the webadmin directly to your end-customer. Your customer follows the instructions contained in the email to install and register.
 2. [Dealer on-site](#dealer-on-site) - While on-site, you can download and register a new install directly from the webadmin.
 
-## Customer Deployment Email
+## Dealer Sends Customer Deployment Email
 For Print Tracker to collect data from printers and copiers it is necessary to install data collection agent (DCA) software on a computer that has network access to the printing devices. The following step-by-step describes the process for dealers to send customers an e-mail that includes a link to the DCA setup file, a DataLink code, and instructions to install and register a DCA. DCAs should be registered with the data link code of the appropriate customer entity.
 
 ### Create/Select Entity
@@ -31,7 +31,7 @@ For Print Tracker to collect data from printers and copiers it is necessary to i
 3. Optionally select **Add CC to e-mail** and enter an additional e-mail address.
 4. Click on the **Send email** button.
 
-### Installing From Deployment Email
+### Customer Installs DCA Using Deployment Email
 1. Open deployment email and either:
     1. Click on the **Download Now** button.
     2. Click on the [setup file download link](https://www.cdn.printtrackerpro.com/modules/installer/PrintTrackerProSetup.msi).
@@ -54,8 +54,8 @@ For Print Tracker to collect data from printers and copiers it is necessary to i
     3. Click the **Activate** button. ![](images/setup-19.png)
     4. Once message ‘The install is registered’ appears close the browser window.  The setup is complete. ![](images/setup-20.png)
 
-## Dealer on-site
-Foobar
+## Dealer Installs DCA While On-site
+For Print Tracker to collect data from printers and copiers it is necessary to install data collection agent (DCA) software on a computer that has network access to the printing devices. The following step-by-step describes how a dealer can install and register a Print Tracker Pro DCA while logged on to the customer’s host computer. Installs / DCAs should be registered with the datalink code of the appropriate customer  entity.
 
 ### Create Select Entity
 1. Select customer entity
