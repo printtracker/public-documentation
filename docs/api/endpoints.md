@@ -131,7 +131,7 @@ Returns an array of current meter reads for all devices at the specified entity.
     === "cURL"
 
         ```shell
-        $ curl --location --request GET 'localhost:8080/v1/entity/<ENTITY-ID-HERE>/currentMeter?includeChildren=true&page=1&limit=100' --header 'x-api-key: <API-KEY-HERE>'
+        $ curl --location --request GET 'papi.printtrackerpro.com/v1/entity/<ENTITY-ID-HERE>/currentMeter?includeChildren=true&page=1&limit=100' --header 'x-api-key: <API-KEY-HERE>'
         ```
 
 === "Response"
@@ -202,9 +202,104 @@ Returns the meter read for a device that is closest to, but not after the provid
     === "cURL"
 
         ```shell
-        $ curl --location --request GET 'https://www.papi.printtrackerpro.com/v1/entity/<ENTITY-ID-HERE>/device/<DEVICE-ID-HERE>/meter/mostRecentPriorTo?date=2021-07-01T17:52:52.417Z' --header 'x-api-key: <API-KEY-HERE>'
+        $ curl --location --request GET 'https://papi.printtrackerpro.com/v1/entity/<ENTITY-ID-HERE>/device/<DEVICE-ID-HERE>/meter/mostRecentPriorTo?date=2021-07-01T17:52:52.417Z' --header 'x-api-key: <API-KEY-HERE>'
         ```
 
 === "Response"
 
-    A sinlge [Meter Read](types.md#meter-read) object
+    A single [Meter Read](types.md#meter-read) object
+
+---
+
+## `POST` Create a new entity
+
+**`POST`** `https://papi.printtrackerpro.com/v1/entity/:entityID`
+
+Creates a new entity underneath an existing entity. The entity key in the path parameters should be the parent entity of the new entity. For example, assuming you have the following hierarchy:
+
+```
+Foo
+    Bar
+        New Entity
+```
+
+Then you would provide the entity key of "Bar" in the path parameter to create "New Entity" underneath "Bar". 
+
+
+=== "Request"
+
+    === "Parameters"
+
+        **Path Parameters**
+        
+        - `entityID` `string` - The ID of the parent entity
+    
+        **Headers**
+    
+        - `x-api-key` - Your Print Tracker API key
+
+        **Body**
+        
+        ```
+        {
+            "name": "New entity"
+        }
+        ```
+    
+    === "cURL"
+
+        ```shell
+        $ curl --location --request POST 'https://papi.printtrackerpro.com/v1/entity/<ENTITY ID HERE>' \
+            --header 'x-api-key: <API-KEY-HERE>' \
+            --header 'Content-Type: application/json' \
+            --data-raw '{
+            "name": "New entity"
+            }'
+        ```
+
+=== "Response"
+
+    [Entity](types.md#entity) 
+
+---
+
+## `PUT` Update an existing entity
+
+**`PUT`** `https://papi.printtrackerpro.com/v1/entity/:entityID`
+
+Updates an existing entity.
+
+=== "Request"
+
+    === "Parameters"
+
+        **Path Parameters**
+        
+        - `entityID` `string` - The ID of the parent entity
+    
+        **Headers**
+    
+        - `x-api-key` - Your Print Tracker API key
+
+        **Body**
+        
+        ```
+        {
+            "name": "Updated entity name"
+        }
+        ```
+    
+    === "cURL"
+
+        ```shell
+        $ curl --location --request PUT 'https://papi.printtrackerpro.com/v1/entity/<ENTITY ID HERE>' \
+            --header 'x-api-key: <API-KEY-HERE>' \
+            --header 'Content-Type: application/json' \
+            --data-raw '{
+                "name": "Updated entity name"
+            }'
+        ```
+
+=== "Response"
+
+    [Entity](types.md#entity) 
