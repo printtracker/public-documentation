@@ -24,6 +24,7 @@ Data collection requires internet connectivity in order for meters and alerts to
 |dcam.printtrackerpro.com`:443`|gRPC streaming (uses HTTP/2 as a transport)|Allows data collection agents to receive jobs, upload meters, and fire alerts.|
 |csr.printtrackerpro.com`:443`|gRPC (uses HTTP/2 as a transport)|Allows data collection agents to register under entities that you configure.|
 |hc.printtrackerpro.com`:443`|HTTP|Allows data collection agents to report their health status.|
+|api.printtrackerpro.com`:443`|HTTP|Allows data collection agents to upload trouble reports.|
 |www.cdn.printtrackerpro.com`:443`|HTTP|Allows data collection agents to automatically upgrade themselves.|
 |www.googleapis.com`:443`|HTTP|Allows data collection agents to download Chromium, the browser used for web-based data collection.|
 |remotetechnician.printtrackerpro.com`:6000`|Proprietary|Allows authenticated users to remotely access device embedded webservers if the feature is enabled.|
