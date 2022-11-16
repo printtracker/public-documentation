@@ -1,14 +1,19 @@
 .md-typeset h1, .md-typeset h2, .md-typeset h3 {
     font-weight: 600;
-}
-
-.md-typeset h1 {
-    color: #000;
+    color: rgb(40, 39, 39)
 }
 
 .md-typeset {
     font-size: .7rem;
     line-height: 1.5;
+}
+
+.md-nav {
+    font-size: 0.63rem;
+}
+
+.md-nav__title {
+    text-transform: uppercase;
 }
 
 .md-content {
@@ -32,4 +37,8 @@
 
 .md-nav__item .md-nav__link--active {
     font-weight: 600;
+}
+
+body {
+    color: rgb(71, 70, 69)
 }
