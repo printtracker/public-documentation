@@ -37,7 +37,7 @@ nav:
       - System Requirements: dca/system-requirements.md
       - Setup & Registration: dca/installation-and-registration.md
       - Troubleshooting: dca/troubleshooting.md
-       - Advanced Troubleshooting Mode: dca/advanced-troubleshooting-mode.md
+      - Advanced Troubleshooting Mode: dca/advanced-troubleshooting-mode.md
       - Whitepaper: dca/whitepaper.md
   - Data Processor:
       - Overview: dataprocessor/overview.md
