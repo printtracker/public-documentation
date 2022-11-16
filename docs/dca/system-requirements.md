@@ -29,4 +29,6 @@ Data collection requires internet connectivity in order for meters and alerts to
 |www.googleapis.com`:443`|HTTP|Allows data collection agents to download Chromium, the browser used for web-based data collection.|
 |remotetechnician.printtrackerpro.com`:6000`|Proprietary|Allows authenticated users to remotely access device embedded webservers if the feature is enabled.|
 
+If [Advanced Troubleshooting Mode](./advanced-troubleshooting-mode.md) is enabled, you will need to make sure your network is compatible with the [Tailscale](https://tailscale.com/kb/1082/firewall-ports/#what-if-i-really-really-want-to-specify-the-hostnames-that-tailscale-uses-to-operate-its-service) network requirements.
+
 [^1]: Print Tracker Pro runs on all versions of Windows that are actively supported by Microsoft and have not reached end-of-life.
