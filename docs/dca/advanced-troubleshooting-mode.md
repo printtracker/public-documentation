@@ -1,5 +1,17 @@
 This mode allows designated Print Tracker engineers to connect directly to a printing device by creating a temporary virtual private network between Print Tracker engineers and the printing device. This technology is powered by [Tailscale](https://tailscale.com/) which enables [private](https://tailscale.com/privacy-policy/), [secure](https://tailscale.com/blog/how-tailscale-works/) connections between Print Tracker and the printing device using an industry-standard technology called [Wireguard](https://tailscale.com/compare/wireguard/). These temporary connections are only created between Print Tracker engineers and the printing device, other devices on customer networks are not exposed; this behavior ensures that Print Tracker engineers access only authorized devices.
 
+## Enabling
+To turn on Advanced Troubleshooting Mode, make sure you have physical or remote access to the data collection agent.
+
+
+1. Navigate to http://localhost:1301/.
+2. Click the toggle switch under the **Advanced Troubleshooting Mode** section.
+
+!!! info
+      If the **Advanced Troubleshooting Mode** option is not shown, it may not be available for your Data Collection Agent yet. Please reach out to [support@printtrackerpro.com](mailto:support@printtrackerpro.com) for additional questions.
+
+![](./images/advanced-troubleshooting-mode-enable.png)
+
 ## Frequently Asked Questions
 ### Why would I need to use Advanced Troubleshooting Mode?
 In most cases, you don’t, however, there are some situations that previously required a Zoom/Team Viewer meeting between Print Tracker engineers and someone onsite at the customer location. In these situations, Advanced Troubleshooting Mode may allow Print Tracker to perform these troubleshooting steps remotely rather than requiring a meeting to be scheduled with the end customer. Examples of situations where Advanced Troubleshooting Mode may be required:
