@@ -1,7 +1,7 @@
 You can install and register an install in two different ways:
 
 1. [Customer deployment email](#customer-deployment-email) - You send a deployment email from the webadmin directly to your end-customer. Your customer follows the instructions contained in the email to install and register.
-2. [Dealer on-site](#dealer-on-site) - While on-site, you can download and register a new install directly from the webadmin.
+2. [Dealer on-site](#dealer-installs-dca-while-on-site) - While on-site, you can download and register a new install directly from the webadmin.
 
 ## Dealer Sends Customer Deployment Email
 For Print Tracker to collect data from printers and copiers it is necessary to install data collection agent (DCA) software on a computer that has network access to the printing devices. The following step-by-step describes the process for dealers to send customers an e-mail that includes a link to the DCA setup file, a DataLink code, and instructions to install and register a DCA. DCAs should be registered with the data link code of the appropriate customer entity.
