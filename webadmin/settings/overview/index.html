@@ -1,0 +1,1745 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../concepts/jobs-and-tasks/">
+      
+      
+        <link rel="next" href="../../billing-preferences/billing-schedule/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Overview - Print Tracker Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/open-sans.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#entity-settings" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Print Tracker Documentation" class="md-header__button md-logo" aria-label="Print Tracker Documentation" data-md-component="logo">
+      <img src="https://storage.googleapis.com/printtracker-assets-bucket/images/p-balloon.png"/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Print Tracker Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Print Tracker Documentation" class="md-nav__button md-logo" aria-label="Print Tracker Documentation" data-md-component="logo">
+      <img src="https://storage.googleapis.com/printtracker-assets-bucket/images/p-balloon.png"/>
+    </a>
+    Print Tracker Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Web Admin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Web Admin
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/entities-users-and-installs/" class="md-nav__link">
+        Entities, Users, and Installs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/devices/" class="md-nav__link">
+        Devices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/settings/" class="md-nav__link">
+        Settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/roles-and-permissions/" class="md-nav__link">
+        Roles and Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/jobs-and-tasks/" class="md-nav__link">
+        Jobs and Tasks
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+          Settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Settings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Overview
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entity-settings" class="md-nav__link">
+    Entity Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-default-settings" class="md-nav__link">
+    Install default settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Install default settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-install-alerts-toggle" class="md-nav__link">
+    New install alerts (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-install-alert-emails-emails" class="md-nav__link">
+    New install alert emails (emails)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-daily-meter-read-single-option" class="md-nav__link">
+    Upload daily meter read (single-option)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan-for-new-devices-on-days-multi-option" class="md-nav__link">
+    Scan for new devices on days (multi-option)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-connection-toggle" class="md-nav__link">
+    Real-time connection (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-hops-number" class="md-nav__link">
+    Max hops (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addresses-to-scan-ip-addressrangewildcardcidr" class="md-nav__link">
+    IP addresses to scan (IP address/range/wildcard/CIDR)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addresses-to-skip-ip-address" class="md-nav__link">
+    IP addresses to skip (IP address)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-technician-toggle" class="md-nav__link">
+    Remote Technician (toggle)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-default-settings" class="md-nav__link">
+    Device default settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Device default settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-for-alert-frequency-in-minutes-number" class="md-nav__link">
+    Check for alert frequency (in minutes) (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low-supply-alerts-toggle" class="md-nav__link">
+    Low supply alerts (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-emails-for-low-supply-alerts-emails" class="md-nav__link">
+    Notification emails (for low supply alerts) (emails)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-threshold-number" class="md-nav__link">
+    Alert threshold (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacement-toggle" class="md-nav__link">
+    Replacement (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-emails-for-replacement-alerts-emails" class="md-nav__link">
+    Notification emails (for replacement alerts) (emails)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premature-replacement-toggle" class="md-nav__link">
+    Premature replacement (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-emails-for-premature-replacement-alerts-emails" class="md-nav__link">
+    Notification emails (for premature replacement alerts) (emails)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-supply-alert" class="md-nav__link">
+    Maintenance supply alert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-threshold" class="md-nav__link">
+    Alert threshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-alert-emails" class="md-nav__link">
+    Service alert emails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-threshold-alerts-toggle" class="md-nav__link">
+    Volume threshold alerts (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recurring-toggle" class="md-nav__link">
+    Recurring (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-alert-at-number" class="md-nav__link">
+    Next alert at (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-number" class="md-nav__link">
+    Frequency (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-alert-emails-emails" class="md-nav__link">
+    Volume alert emails (emails)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-retries-number" class="md-nav__link">
+    Max retries (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeout-in-milliseconds-number" class="md-nav__link">
+    Timeout (in milliseconds) (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-string-string" class="md-nav__link">
+    Community string (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-single-option" class="md-nav__link">
+    Version (single-option)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+          Installation & Registration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Installation & Registration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-installation/overview.md" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+          Billing Preferences
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Billing Preferences
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../billing-preferences/billing-schedule/" class="md-nav__link">
+        Billing Schedule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../billing-preferences/billing-meters/" class="md-nav__link">
+        Billing Meters
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+          Auto-fulfillment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Auto-fulfillment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../auto-fulfillment/supplies-network/" class="md-nav__link">
+        Supplies Network
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+          Fleet Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Fleet Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fleet-management/devices/" class="md-nav__link">
+        Devices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+          Reporting and Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          Reporting and Analysis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reporting-and-analysis/custom-reports/" class="md-nav__link">
+        Custom Reports
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reporting-and-analysis/device-history/" class="md-nav__link">
+        Device History
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reporting-and-analysis/table-schema-viewer/" class="md-nav__link">
+        Table Schema Viewer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+          Remote Technician
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_9">
+          <span class="md-nav__icon md-icon"></span>
+          Remote Technician
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../remote-technician/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../remote-technician/whitepaper/" class="md-nav__link">
+        Whitepaper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Data Collection Agent
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Collection Agent
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dca/system-requirements/" class="md-nav__link">
+        System Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dca/installation-and-registration/" class="md-nav__link">
+        Setup & Registration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dca/troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dca/advanced-troubleshooting-mode/" class="md-nav__link">
+        Advanced Troubleshooting Mode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dca/whitepaper/" class="md-nav__link">
+        Whitepaper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Data Processor
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Data Processor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataprocessor/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataprocessor/meters/" class="md-nav__link">
+        Meters
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/endpoints/" class="md-nav__link">
+        Endpoints
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/types/" class="md-nav__link">
+        Types
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../best-practices/fleet-management/" class="md-nav__link">
+        Fleet Management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entity-settings" class="md-nav__link">
+    Entity Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-default-settings" class="md-nav__link">
+    Install default settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Install default settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-install-alerts-toggle" class="md-nav__link">
+    New install alerts (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-install-alert-emails-emails" class="md-nav__link">
+    New install alert emails (emails)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload-daily-meter-read-single-option" class="md-nav__link">
+    Upload daily meter read (single-option)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan-for-new-devices-on-days-multi-option" class="md-nav__link">
+    Scan for new devices on days (multi-option)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-connection-toggle" class="md-nav__link">
+    Real-time connection (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-hops-number" class="md-nav__link">
+    Max hops (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addresses-to-scan-ip-addressrangewildcardcidr" class="md-nav__link">
+    IP addresses to scan (IP address/range/wildcard/CIDR)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addresses-to-skip-ip-address" class="md-nav__link">
+    IP addresses to skip (IP address)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-technician-toggle" class="md-nav__link">
+    Remote Technician (toggle)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-default-settings" class="md-nav__link">
+    Device default settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Device default settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-for-alert-frequency-in-minutes-number" class="md-nav__link">
+    Check for alert frequency (in minutes) (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low-supply-alerts-toggle" class="md-nav__link">
+    Low supply alerts (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-emails-for-low-supply-alerts-emails" class="md-nav__link">
+    Notification emails (for low supply alerts) (emails)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-threshold-number" class="md-nav__link">
+    Alert threshold (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replacement-toggle" class="md-nav__link">
+    Replacement (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-emails-for-replacement-alerts-emails" class="md-nav__link">
+    Notification emails (for replacement alerts) (emails)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premature-replacement-toggle" class="md-nav__link">
+    Premature replacement (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-emails-for-premature-replacement-alerts-emails" class="md-nav__link">
+    Notification emails (for premature replacement alerts) (emails)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-supply-alert" class="md-nav__link">
+    Maintenance supply alert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alert-threshold" class="md-nav__link">
+    Alert threshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-alert-emails" class="md-nav__link">
+    Service alert emails
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-threshold-alerts-toggle" class="md-nav__link">
+    Volume threshold alerts (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recurring-toggle" class="md-nav__link">
+    Recurring (toggle)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-alert-at-number" class="md-nav__link">
+    Next alert at (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-number" class="md-nav__link">
+    Frequency (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-alert-emails-emails" class="md-nav__link">
+    Volume alert emails (emails)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-retries-number" class="md-nav__link">
+    Max retries (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeout-in-milliseconds-number" class="md-nav__link">
+    Timeout (in milliseconds) (number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-string-string" class="md-nav__link">
+    Community string (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-single-option" class="md-nav__link">
+    Version (single-option)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Overview</h1>
+
+<p>Settings determine the behavior of every operation in Print Tracker. Print Tracker uses dynamic settings inheritance (DSI) to give you the ability to make broad, sweeping changes to the settings of your entire fleet, or microscopic changes to specific devices. <a href="../../concepts/settings/">Click here</a> learn more about DSI. In this section we'll cover what settings can be configured at the entity, install, and device levels as well as what each setting does. Understanding the purpose of each setting will help you keep a high device-reporting rate.</p>
+<h2 id="entity-settings">Entity Settings</h2>
+<p>Most entity-level settings are actually install-level and device-level defaults, in other words, their presence on the entity-level is only meant to allow you to configure the defaults used all installs and devices in the entity's hierarchy. We'll look at each of these default setting sections. Keep in mind that these are defaults only, this means that if a specific install or device chooses to override the setting with a different value, the entity-level default will not be applicable anymore.</p>
+<h3 id="install-default-settings">Install default settings</h3>
+<p>These settings are applicable only to installs in your entity's hierarchy.</p>
+<div class="admonition example">
+<p class="admonition-title">Install alerts</p>
+<h4 id="new-install-alerts-toggle">New install alerts (toggle)</h4>
+<p>If this setting is enabled and new install alert emails have been configured, emails will be sent everytime a new install is registered.</p>
+<hr />
+<h4 id="new-install-alert-emails-emails">New install alert emails (emails)</h4>
+<p>You can enter any number of emails. Each email address will receive an email notification whenever a new install is registered.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Data collection agent</p>
+<h4 id="upload-daily-meter-read-single-option">Upload daily meter read (single-option)</h4>
+<p>Determines what time range during the data meter reads are collected from all devices and uploaded.</p>
+<hr />
+<h4 id="scan-for-new-devices-on-days-multi-option">Scan for new devices on days (multi-option)</h4>
+<p>Determines which days of the week a network scan is performed. Network scans look for new devices and for discovered devices whose IP addresses have changed. The network scan uses any <a href="#ip-addresses">IP addresses</a> that have been configured. If an install does not scan on any day of the week, devices that move IP addresses will stop reporting.</p>
+<hr />
+<h4 id="real-time-connection-toggle">Real-time connection (toggle)</h4>
+<p>If enabled, the install will connect to Print Tracker using a mTLS secured, HTTP/2 stream which allows the install to receive jobs from the web admin as soon as they're sent. If this setting is disabled the install will connect periodically to receive jobs. We reccomend that users enable this setting when they're troubleshooting or are interacting with the install regularly.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Network discovery</p>
+<h4 id="max-hops-number">Max hops (number)</h4>
+<p>Refers to the maxmimum number of inter-network router-hops that an install will perform when doing automatic network scans. Automatic network scans only occur when an install is registered for the first time and when no <a href="#ip-addresses">IP addresses</a> are configured for that install to scan by default.</p>
+<hr />
+<h4 id="ip-addresses-to-scan-ip-addressrangewildcardcidr">IP addresses to scan (IP address/range/wildcard/CIDR)</h4>
+<p>When a <a href="#scan-for-new-devices-on-days">network scan</a> is performed, it uses the IP addresses, ranges, wildcards, or CIDR blocks to determine when IP addresses should be scanned.</p>
+<hr />
+<h4 id="ip-addresses-to-skip-ip-address">IP addresses to skip (IP address)</h4>
+<p>When a <a href="#scan-for-new-devices-on-days">network scan</a> is performed, it excludes the IP addresses configured here. Priority is always given to excluded IP addresses, in other words if you add the IP address to the <a href="#ip-addresses">IP addresses to scan</a> setting, as well as this setting, the install will ultimately skip scanning the IP address. You can exclude specific IP addresses but you cannot exclude ranges, wildcards, or CIDR blocks.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Remote technician</p>
+<h4 id="remote-technician-toggle">Remote Technician (toggle)</h4>
+<p>If enabled, users with the appropriate roles will be able to use <a href="../../remote-technician/overview/">Remote Technician</a> to access a device EWS for any devices tracked by this install.</p>
+</div>
+<h3 id="device-default-settings">Device default settings</h3>
+<p>The settings are applicable only to devices in your entity's hierarchy.</p>
+<div class="admonition example">
+<p class="admonition-title">Device alerts</p>
+<h4 id="check-for-alert-frequency-in-minutes-number">Check for alert frequency (in minutes) (number)</h4>
+<p>This setting determines how often an install should scan the meter reads looking for potential supply or service alerts. This number should usually be at least 60 (minutes) because meters are collected for devices every hour. Any value lower then 60 would be redundant.</p>
+<hr />
+<div class="admonition example">
+<p class="admonition-title">Supply alerts</p>
+<h4 id="low-supply-alerts-toggle">Low supply alerts (toggle)</h4>
+<p>Determines whether low supply alerts are enabled. Low supply alerts will always be created and viewable in the web admin, this setting applies only to supply alert notifications such as email alerts.</p>
+<hr />
+<h4 id="notification-emails-for-low-supply-alerts-emails">Notification emails (for low supply alerts) (emails)</h4>
+<p>Any number of email addresses that low supply alerts should be sent to.</p>
+<hr />
+<h4 id="alert-threshold-number">Alert threshold (number)</h4>
+<p>When the percent of supply remaining crosses this threshold, a supply alert is created. If a supply replacement is detected before it reaches this threshold, the replacement is considered to be a premature cartridge replacement (PCR).</p>
+<hr />
+<h4 id="replacement-toggle">Replacement (toggle)</h4>
+<p>Determines whether supply replacement alerts are sent. A supply replacement alert occurs when an install has detected that a supply has been replaced.</p>
+<hr />
+<h4 id="notification-emails-for-replacement-alerts-emails">Notification emails (for replacement alerts) (emails)</h4>
+<p>Any number of email addresses that replacement alerts should be sent to.</p>
+<hr />
+<h4 id="premature-replacement-toggle">Premature replacement (toggle)</h4>
+<p>Determines whether premature cartirdige replacement (PCR) alerts are sent. A PCR alert occurs when an install has detected that a supply has been replaced before it has crossed the alert threshold.</p>
+<hr />
+<h4 id="notification-emails-for-premature-replacement-alerts-emails">Notification emails (for premature replacement alerts) (emails)</h4>
+<p>Any number of email addresses that premature cartridge replacement alerts should be sent to.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Service alerts</p>
+<h4 id="maintenance-supply-alert">Maintenance supply alert</h4>
+<p>Determines whether maintenance kit or drum cartridge alerts are sent.</p>
+<hr />
+<h4 id="alert-threshold">Alert threshold</h4>
+<p>When a maintenance kit or drum crosses this alert threshold, a maintenance alert is created.</p>
+<hr />
+<h4 id="service-alert-emails">Service alert emails</h4>
+<p>Any number of email addresses that maintenance or drum alerts should be sent to.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Volume alerts</p>
+<h4 id="volume-threshold-alerts-toggle">Volume threshold alerts (toggle)</h4>
+<p>Determines whether volume threshold alerts are sent.</p>
+<hr />
+<h4 id="recurring-toggle">Recurring (toggle)</h4>
+<p>When enabled, volume alerts will be sent every time the total page counter crosses a frequency threshold.</p>
+<hr />
+<h4 id="next-alert-at-number">Next alert at (number)</h4>
+<p>Determines the value that the total page counter must reach in order to fire the next volume alert. If recurring volume alerts are enabled, this value is updated to reflect the value of the next volume alert every time the total page counter crosses a frequency threshold.</p>
+<hr />
+<h4 id="frequency-number">Frequency (number)</h4>
+<p>This value is only applicable if recurring volume alerts are enabled. It determines how often (in page counts) a volume alert should be fired.</p>
+<hr />
+<h4 id="volume-alert-emails-emails">Volume alert emails (emails)</h4>
+<p>Any number of email addresses that volume alerts should be sent to.</p>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Billing preferences</p>
+<p>These settings are covered in greater detail in <a href="../../billing-preferences/billing-meters/">billing meters</a> and <a href="../../billing-preferences/billing-schedule/">billing schedule</a>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Auto-fulfillment</p>
+<p>These settings are covered in greater detail in <a href="../../auto-fulfillment/supplies-network/">auto-fulfillment</a></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Shared default settings</p>
+<p>These settings are shared between both the installs and the devices.</p>
+<div class="admonition example">
+<p class="admonition-title">SNMP</p>
+<p>SNMP settings are shared between installs and devices for different reasons. Installs use SNMP settings for device discovery, whereas devices use SNMP settings for data collection. Both SNMPv1 and SNMPv3 settings are used when attempting to connect to a device.</p>
+<h4 id="max-retries-number">Max retries (number)</h4>
+<p>The maxmimum number of retries used when attempting to connect to a device using the SNMP protocol.</p>
+<hr />
+<h4 id="timeout-in-milliseconds-number">Timeout (in milliseconds) (number)</h4>
+<p>The maxmimum amount of time an install will wait for a response from the device per-retry.</p>
+<hr />
+<h4 id="community-string-string">Community string (string)</h4>
+<p>The SNMP community string.</p>
+<hr />
+<h4 id="version-single-option">Version (single-option)</h4>
+<p>The SNMP version, which is either v1, v2 or v3.</p>
+</div>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tables.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

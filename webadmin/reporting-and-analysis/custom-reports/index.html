@@ -1,0 +1,1815 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../fleet-management/devices/">
+      
+      
+        <link rel="next" href="../device-history/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>Custom Reports - Print Tracker Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/open-sans.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#report-types" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Print Tracker Documentation" class="md-header__button md-logo" aria-label="Print Tracker Documentation" data-md-component="logo">
+      <img src="https://storage.googleapis.com/printtracker-assets-bucket/images/p-balloon.png"/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Print Tracker Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Custom Reports
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Print Tracker Documentation" class="md-nav__button md-logo" aria-label="Print Tracker Documentation" data-md-component="logo">
+      <img src="https://storage.googleapis.com/printtracker-assets-bucket/images/p-balloon.png"/>
+    </a>
+    Print Tracker Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Web Admin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Web Admin
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/entities-users-and-installs/" class="md-nav__link">
+        Entities, Users, and Installs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/devices/" class="md-nav__link">
+        Devices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/settings/" class="md-nav__link">
+        Settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/roles-and-permissions/" class="md-nav__link">
+        Roles and Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/jobs-and-tasks/" class="md-nav__link">
+        Jobs and Tasks
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+          Settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Settings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+          Installation & Registration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Installation & Registration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup-and-installation/overview.md" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+          Billing Preferences
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Billing Preferences
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../billing-preferences/billing-schedule/" class="md-nav__link">
+        Billing Schedule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../billing-preferences/billing-meters/" class="md-nav__link">
+        Billing Meters
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+          Auto-fulfillment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Auto-fulfillment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../auto-fulfillment/supplies-network/" class="md-nav__link">
+        Supplies Network
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+          Fleet Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Fleet Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fleet-management/devices/" class="md-nav__link">
+        Devices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+          Reporting and Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          Reporting and Analysis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Custom Reports
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Custom Reports
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#report-types" class="md-nav__link">
+    Report Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device" class="md-nav__link">
+    Device
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-meter" class="md-nav__link">
+    Current Meter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-analysis" class="md-nav__link">
+    Volume Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#billing-period" class="md-nav__link">
+    Billing Period
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estimated-depletion-on-demand" class="md-nav__link">
+    Estimated Depletion (On-demand)
+  </a>
+  
+    <nav class="md-nav" aria-label="Estimated Depletion (On-demand)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-stipulations" class="md-nav__link">
+    Time Stipulations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-report" class="md-nav__link">
+    Creating a Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-editor" class="md-nav__link">
+    Report Editor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-a-report" class="md-nav__link">
+    Scheduling a Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduling a Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scheduled-reports-and-dates" class="md-nav__link">
+    Scheduled Reports and Dates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-where-clause" class="md-nav__link">
+    SQL WHERE Clause
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meter-read-table-schema" class="md-nav__link">
+    Meter Read Table Schema
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../device-history/" class="md-nav__link">
+        Device History
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../table-schema-viewer/" class="md-nav__link">
+        Table Schema Viewer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+          Remote Technician
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_9">
+          <span class="md-nav__icon md-icon"></span>
+          Remote Technician
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../remote-technician/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../remote-technician/whitepaper/" class="md-nav__link">
+        Whitepaper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Data Collection Agent
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Collection Agent
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dca/system-requirements/" class="md-nav__link">
+        System Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dca/installation-and-registration/" class="md-nav__link">
+        Setup & Registration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dca/troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dca/advanced-troubleshooting-mode/" class="md-nav__link">
+        Advanced Troubleshooting Mode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dca/whitepaper/" class="md-nav__link">
+        Whitepaper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Data Processor
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Data Processor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataprocessor/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dataprocessor/meters/" class="md-nav__link">
+        Meters
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/endpoints/" class="md-nav__link">
+        Endpoints
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/types/" class="md-nav__link">
+        Types
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Best Practices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Best Practices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../best-practices/fleet-management/" class="md-nav__link">
+        Fleet Management
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#report-types" class="md-nav__link">
+    Report Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device" class="md-nav__link">
+    Device
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-meter" class="md-nav__link">
+    Current Meter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-analysis" class="md-nav__link">
+    Volume Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#billing-period" class="md-nav__link">
+    Billing Period
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estimated-depletion-on-demand" class="md-nav__link">
+    Estimated Depletion (On-demand)
+  </a>
+  
+    <nav class="md-nav" aria-label="Estimated Depletion (On-demand)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-stipulations" class="md-nav__link">
+    Time Stipulations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-report" class="md-nav__link">
+    Creating a Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-editor" class="md-nav__link">
+    Report Editor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-a-report" class="md-nav__link">
+    Scheduling a Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduling a Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scheduled-reports-and-dates" class="md-nav__link">
+    Scheduled Reports and Dates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-where-clause" class="md-nav__link">
+    SQL WHERE Clause
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meter-read-table-schema" class="md-nav__link">
+    Meter Read Table Schema
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Custom Reports</h1>
+
+<p>Custom reports allow you to design a build exportable reports using SQL queries. Print Tracker provides a set of pre-build SQL queries that should cover most reporting requirements. In the situations where you need more advanced flexibility, you can harness the power of SQL to create exactly what you're looking for.</p>
+<p>A report can be one of several report types. The report type determines the type of data that is available for use in the report. We'll go into each of these report types in detail shortly.</p>
+<ul>
+<li><a href="#device">Device</a> - Returns information about devices such as the make, model, serial number, IP address, mac address, asset ID, location, notes, entity name and latest meter read timestamp. This report type is useful for getting information about your fleet of devices.</li>
+<li><a href="#current-meter">Current Meter</a> - Returns the previously mentioned device information along with columns for the most recent meter read of the device. To learn more about the schema design for meter reads, see <a href="#meter-read-table-schema">Meter Read Table Schema</a>.</li>
+<li><a href="#volume-analysis">Volume Analysis</a> - Returns the previously mentioned device information along with columns for the first meter and last meter reads in a specified date range. This report is useful for comparing the volume changes in different meters over time.</li>
+<li><a href="#billing-period">Billing Period</a> - Returns the same information as the Volume Analysis report but allows the user to specify a single billing date. All devices that have been configured to bill on the specified date will be returned in the report.</li>
+<li><a href="#estimated-depletion-on-demand">Estimated Depletion (On-demand)</a> - Returns a list of devices and the estimated depletion dates for their supplies.</li>
+<li><a href="../device-history/">Device History</a> - This report type is only accessible on a per-device basis. We will not cover this report type in this section, for more details and how to use it, see <a href="../device-history/#viewing-device-history">Viewing Device History</a>.</li>
+</ul>
+<h2 id="report-types">Report Types</h2>
+<h3 id="device">Device</h3>
+<p>This report type can be used to return basic information about your fleet of devices, for example the following query returns the make, model and serial number for each device.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">make</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="n">serial_number</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">devices</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>make</th>
+<th>model</th>
+<th>serial_number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HP</td>
+<td>LaserJet Pro M454dn</td>
+<td>VNB3K15252</td>
+</tr>
+<tr>
+<td>Xerox</td>
+<td>VersaLink C405</td>
+<td>4HX559916</td>
+</tr>
+<tr>
+<td>Brother</td>
+<td>HL-L6200DW</td>
+<td>U64180D9N509865</td>
+</tr>
+<tr>
+<td>Ricoh</td>
+<td>MP C307</td>
+<td>C508P103178</td>
+</tr>
+</tbody>
+</table>
+<p>You can perform more complicated aggregations to get insights into your fleet. For example, you can figure out the number of device by model sorted by most popular model to least popular model.
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">make</span><span class="p">,</span><span class="w"> </span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">()</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">count</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">devices</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">model</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">count</span><span class="w"> </span><span class="k">DESC</span>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>make</th>
+<th>model</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HP</td>
+<td>OfficeJet Pro 8710</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Epson</td>
+<td>WF-4740</td>
+<td>4</td>
+</tr>
+<tr>
+<td>HP</td>
+<td>Officejet 5740</td>
+<td>3</td>
+</tr>
+<tr>
+<td>HP</td>
+<td>LaserJet Pro M404dn</td>
+<td>3</td>
+</tr>
+<tr>
+<td>HP</td>
+<td>LaserJet M402n</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="current-meter">Current Meter</h3>
+<p>In a normal scenario, an install will collect a meter read from a device every day. This report type allows you to view the most recent meter read collected for this device. There are many available column names, to learn more about the schema design for meter reads, see <a href="#meter-read-table-schema">Meter Read Table Schema</a> or use the <a href="../table-schema-viewer/">Table Schema viewer</a>.</p>
+<p>In this example, we'll use this report type to view the most recent values for the total, total black and total color counters.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="n">make</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Make</span><span class="p">,</span>
+<span class="w">    </span><span class="n">model</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Model</span><span class="p">,</span>
+<span class="w">    </span><span class="n">DATETIME</span><span class="p">(</span><span class="n">latest_meter_timestamp</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Timestamp&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">pageCounts_default_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Total&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">pageCounts_default_totalBlack</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Total Black&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">pageCounts_default_totalColor</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Total Color&#39;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">meters</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">latest_meter_timestamp</span><span class="w"> </span><span class="k">DESC</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Make</th>
+<th>Model</th>
+<th>Timestamp</th>
+<th>Total</th>
+<th>Total Black</th>
+<th>Total Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HP</td>
+<td>OfficeJet Pro 8710</td>
+<td>2021-08-10 14:24:35</td>
+<td>13076</td>
+<td>8039</td>
+<td>5923</td>
+</tr>
+<tr>
+<td>HP</td>
+<td>Officejet 5740</td>
+<td>2021-08-10 14:24:33</td>
+<td>7287</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Xerox</td>
+<td>VersaLink C7025</td>
+<td>2021-08-10 14:24:12</td>
+<td>101299</td>
+<td>96472</td>
+<td>4827</td>
+</tr>
+<tr>
+<td>Epson</td>
+<td>WF-4740</td>
+<td>2021-08-10 14:24:10</td>
+<td>50045</td>
+<td>35055</td>
+<td>14990</td>
+</tr>
+<tr>
+<td>HP</td>
+<td>LaserJet MFP M426fdn</td>
+<td>2021-08-10 08:57:30</td>
+<td>49900</td>
+<td>49900</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="volume-analysis">Volume Analysis</h3>
+<p>This report type allows you to compare any meter read value between two dates that you can specify. The first meter read column names are prefixed with <code>first_</code> and the last meter read column names are prefixed with <code>last_</code>. This report is different than the previously mentioned reports because it allows you to specify a start and end date. The first meter read returned is the meter read closest to, but greater than the start date. The last meter read returned is the meter read closest to but less than the end date. There are many available column names, to learn more about the schema design for meter reads, see <a href="#meter-read-table-schema">Meter Read Table Schema</a> or use the <a href="../table-schema-viewer/">Table Schema viewer</a>.</p>
+<p>In the following example, we'll start by comparing the total counter between the start and end date, and adding a calculated column indicating the volume.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span>
+<span class="w">    </span><span class="n">make</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Make&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">model</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Model&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">serial_number</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Serial Number&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">first_pageCounts_default_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;First Total&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">last_pageCounts_default_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Last Total&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">last_pageCounts_default_total</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">first_pageCounts_default_total</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Total Volume&#39;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">meters</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">last_pageCounts_default_total</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">first_pageCounts_default_total</span><span class="w"> </span><span class="k">DESC</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Make</th>
+<th>Model</th>
+<th>Serial Number</th>
+<th>First Total</th>
+<th>Last Total</th>
+<th>Total Volume</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Epson</td>
+<td>WF-4740</td>
+<td>X2TY047472</td>
+<td>10787</td>
+<td>50045</td>
+<td>39258</td>
+</tr>
+<tr>
+<td>HP</td>
+<td>OfficeJet Pro 8710</td>
+<td>CN7BUBW18F</td>
+<td>2414</td>
+<td>13076</td>
+<td>10662</td>
+</tr>
+<tr>
+<td>HP</td>
+<td>LaserJet Pro M404dn</td>
+<td>PHBB610068</td>
+<td>128072</td>
+<td>131745</td>
+<td>3673</td>
+</tr>
+<tr>
+<td>HP</td>
+<td>LaserJet M402n</td>
+<td>PHBHD21375</td>
+<td>170668</td>
+<td>173089</td>
+<td>2421</td>
+</tr>
+<tr>
+<td>HP</td>
+<td>LaserJet MFP M227fdn</td>
+<td>VNG3N22447</td>
+<td>8429</td>
+<td>10835</td>
+<td>2406</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice how in the Current Meter report type, we reference the total counter using the column name <code>pageCounts_default_total</code> but in the Volume Analysis report type, we referenced the total counter using both the <code>first_pageCounts_default_total</code> and <code>last_pageCounts_default_total</code> column names. The Volume Analysis report gives us two meter reads between the specified date range and every value in each meter read is prefixed with its respective prefix.</p>
+</div>
+<h3 id="billing-period">Billing Period</h3>
+<p>This report type is almost identical to the Volume Analysis report type. The major difference is that the Billing Period report allows you to specify a billing date rather than a date range. The Volume Analysis report's date range returns device meter reads for the same time period for all devices whereas the Billing Period report returns the first and last meter reads for each device whose billing period ends on the specified billing date. To understand which devices will appear in a Billing Period report, let's assume we have two devices with the following billing periods.</p>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Billing period</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HP LaserJet M477</td>
+<td>Bi-monthly</td>
+</tr>
+<tr>
+<td>HP OfficeJet 8600</td>
+<td>Monthly</td>
+</tr>
+</tbody>
+</table>
+<p>Let's plot the billing periods over the course of three months. If the selected billing date in the Billing Period report were to be the last day of month one (#1), then only the HP OfficeJet 8600 device would appear on the Billing Period report. This is because it's the only device whose billing period ends on the selected billing date.</p>
+<p>If we were set the billing date to be the end of month two (#2) then both the HP LaserJet M477 and the HP OfficeJet 8600 would appear on the Billing Period report. This is because both device's billing periods end on the selected billing date.</p>
+<p><img alt="" src="../../images/billing-period-example.png" /></p>
+<p>The Billing Period report allows you to configure the billing period (or contract date, or billing date, etc) for each device individually, and then view all the devices whose billing periods end on the selected billing date. It is an alternative to the Volume Analysis method of grouping device and meter data together that more closely reflects how device contracts are managed in the real-world.</p>
+<p>There are many available column names, to learn more about the schema design for meter reads, see <a href="#meter-read-table-schema">Meter Read Table Schema</a> or use the <a href="../table-schema-viewer/">Table Schema viewer</a>.</p>
+<h3 id="estimated-depletion-on-demand">Estimated Depletion (On-demand)</h3>
+<div class="admonition warning">
+<p class="admonition-title">On-demand</p>
+<p>This report performs estimated depletion calculations by analyzing 95-days worth of meter history on demand which can cause this report to take longer to process than other report.</p>
+</div>
+<p>The estimated depletion report can be used to get estimated depletion dates for black, cyan, magenta, yellow toners and inks. The calculations rely on historical printing patterns using meters collected within the last 95 days. If printing patterns are volatile, then the estimated depletion dates will likely be unreliable. This report does not currently support including children.</p>
+<h4 id="time-stipulations">Time Stipulations</h4>
+<p>You can customize the query to return only devices that have at least one supply that is expected to deplete within a certain timeframe. For example, if we wanted to only see devices that are expected to run out of at least one supply within the next two weeks, we can add this where clause to our query.</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Make</span><span class="p">,</span>
+<span class="w">    </span><span class="n">model</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Model</span><span class="p">,</span>
+<span class="w">    </span><span class="n">serial_number</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Serial Number&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">asset_id</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Asset ID&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ip_address</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;IP Address&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">DATETIME</span><span class="p">(</span><span class="n">latest_meter_timestamp</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Latest Meter Timestamp&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nb">DATE</span><span class="p">(</span><span class="n">estimated_depletion_black_toner</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Black Toner Depletion&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nb">DATE</span><span class="p">(</span><span class="n">estimated_depletion_cyan_toner</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Cyan Toner Depletion&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nb">DATE</span><span class="p">(</span><span class="n">estimated_depletion_magenta_toner</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Magenta Toner Depletion&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nb">DATE</span><span class="p">(</span><span class="n">estimated_depletion_yellow_toner</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;Yellow Toner Depletion&#39;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">device_estimated_depletion_on_demand</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="n">estimated_depletion_black_toner</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="s1">&#39;now&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;+14 days&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">OR</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="n">estimated_depletion_cyan_toner</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="s1">&#39;now&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;+14 days&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">OR</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="n">estimated_depletion_magenta_toner</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="s1">&#39;now&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;+14 days&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">OR</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="n">estimated_depletion_yellow_toner</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="s1">&#39;now&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;+14 days&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="creating-a-report">Creating a Report</h2>
+<p>To create a report</p>
+<ol>
+<li>Navigate to the <strong>Insights &gt; Reports</strong> page using the sidebar.</li>
+<li>Click <strong>New Report</strong> and give the report a name, for example <strong>"My Volume Analysis"</strong>.</li>
+<li>Click on the new row in the reports list that was just added. You can customize the name or description of the report in the top-left corner of the "Configuration" tab.</li>
+<li>
+<p>Click <strong>Report Type</strong> and select <strong>"Volume Analysis"</strong>. This will populate a default volume analysis query in the query editor.</p>
+</li>
+<li>
+<p>Click <strong>Run</strong> to output a sample of the pre-built query.</p>
+</li>
+<li>Click <strong>Export</strong> to export a CSV file containing the full dataset. Because the CSV export uses the full dataset, it often takes longer then just clicking Run.</li>
+</ol>
+<h3 id="report-editor">Report Editor</h3>
+<p>Let's pause for a moment and review the different parts of the custom reports editor starting in the top-left corner.</p>
+<ul>
+<li><strong>Report configuration</strong> allows you to configure metadata about the report for your own organizational purposes (name and description), as well as how the report itself should behave. You can configure the <a href="#report-types">report type</a> and whether the report should include children or not. Reports that include children will include data from the current entity and all children entities.</li>
+<li><strong>Query editor</strong> comes with pre-built queries for each report type. Any <a href="https://www.sqlite.org/lang.html">SQLite-compatible statements</a> can be used in this editor. You can use the "Run" button to test your query on a small sample of your full dataset, or "Export" your full dataset using the provided query. It gives you full control over things like:<ul>
+<li>Column names</li>
+<li>Calculated columns</li>
+<li>Aggregations and sorting</li>
+<li>Filtering</li>
+</ul>
+</li>
+<li><strong><a href="../table-schema-viewer/">Table Schema viewer</a></strong> allows you to view all the available columns and column types that can be used in your query.</li>
+<li><strong>Query result</strong> is a table containing a small sample of your full dataset after being processed using your query. It should give you an idea of what the exported data will look like.</li>
+<li>The save button in the button right-hand corner must be clicked everytime you're finished making changes.</li>
+</ul>
+<p><img alt="" src="../../images/new-reports-report-editor.png" /></p>
+<h2 id="scheduling-a-report">Scheduling a Report</h2>
+<p>Any report can be automatically emailed on a pre-defined schedule. You can create any number of schedules for a single report. Each schedule can be completely customized for a specific entity and contain custom email subject line and body text. You can even use template variables</p>
+<ol>
+<li>Assuming you've already selected a report from the list of reports, click the <strong>Schedules</strong> tab.</li>
+<li>
+<p>Click <strong>New Schedule</strong>, this opens up a modal with all the options for creating a new scheduled report. Let's break down each option:</p>
+<p><img alt="" src="../../images/new-report-new-scheduled-report.png" /></p>
+<ul>
+<li><strong>Entity</strong> refers to the scope of the data that should be included in the report, for example if you're sending the report to yourself and you want the data for your entire dealership, you would search for your entity's name. If you're setting up a scheduled report on behalf of an end-customer and you want to limit the scope of the data in the report to just that end-customer, you would enter the end-customer's entity name.</li>
+<li><strong>Enabled</strong> allows you to enable and disable a scheduled report without deleting it entirely. This is useful for temporarily pausing the scheduled reports.</li>
+<li><strong>Report schedule</strong> allows you to pick a schedule for how often a report should be sent.</li>
+<li><strong>Timezone</strong> defaults to the timezone of your browser and determines which timezone should be used when determining when to send the reports. If you're creating a scheduled report for an end-customer and the end-customer is in a different timezone from you, you may want to specify the end-customers timezone here so that the report schedule reflects when the end-customer will get their report.</li>
+<li><strong>Export options</strong> currently only supports email. You can specify any number of email addresses for this scheduled report as well as a custom subject and body for the email. The subject and body support template variables for customizing the scheduled report. Currently, only <code>ReportName</code> and <code>EntityName</code> are supported.</li>
+</ul>
+</li>
+<li>
+<p>After configuring the scheduled report, make sure to click <strong>Save</strong>.</p>
+</li>
+</ol>
+<h3 id="considerations">Considerations</h3>
+<h4 id="scheduled-reports-and-dates">Scheduled Reports and Dates</h4>
+<p>Different <a href="#report-types">report types</a> accept different customizations, for example the <a href="#volume-analysis">Volume Analysis</a> report type allows the user to specify a start and end date and the <a href="#billing-period">Billing Period</a> report type allows the user to specify a billing date. When a report is scheduled, it's obviously not possible or ideal for the user to specify these dates for each scheduled report that gets sent out. Instead, Print Tracker derives these customizable dates from the configured schedule. Let's look at a few examples:</p>
+<ul>
+<li>Let's assume we've created a volume analysis report that is scheduled for the first day of every month. On February 1st, the volume analysis report will be created with a start date of January 1st and an end date of February 1st. The date range ends on the date of the scheduled report (February 1st) and starts at the previous intervals end-date (January 1st).</li>
+<li>Let's assume we've created a billing period report that is scheduled for every day. On February 1st, the billing period report will be created with a billing date of February 1st. On February 2nd, the billing period report will be created with a billing date of February 2nd, and so on.</li>
+</ul>
+<h4 id="sql-where-clause">SQL <code>WHERE</code> Clause</h4>
+<p>SQLite supports using the <code>WHERE</code> keyword to perform advanced filtering predicates. Keep in mind that the report editor takes a <a href="#report-editor">sample of the full dataset</a>, this means that the filtering predicates you apply using SQL <code>WHERE</code> clauses may not return any results if the smaller sampled dataset does not have any rows that match the <code>WHERE</code> predicate. You might also find that because the full dataset is randomly sampled everytime you start working on a new report, the results of your query may differ between query executions.</p>
+<p>This problem does not apply to exported reports because they do not take a random sample of the dataset, rather exported reports perform your query on the dataset as a whole. This means that query executions are deterministic and if no rows are returned, there simply isn't a row in your dataset that matches your <code>WHERE</code> predicate.</p>
+<h2 id="meter-read-table-schema">Meter Read Table Schema</h2>
+<p>The meter read follows a hierarchical pattern for organizing related page counts and supplies. The hierarchy looks something like this. Some meter reads contain much less data (sometimes only the total counter), and some meter reads contain much more data. You can always refer to the <a href="../table-schema-viewer/">Table Schema viewer</a> to view all the available columns. Devices that do not support certain properties will return <code>nulls</code> in these columns (or empty values when exported to CSV). 
+<div class="highlight"><pre><span></span><code><span class="nt">pageCounts</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">total</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalBlack</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalColor</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalCopies</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalCopiesBlack</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalPrints</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalPrintsBlack</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalFaxes</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalScans</span>
+<span class="w">  </span><span class="nt">equiv</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">total</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalBlack</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalColor</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalCopies</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalCopiesBlack</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalPrints</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalPrintsBlack</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalFaxes</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalScans</span>
+<span class="w">  </span><span class="nt">life</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">total</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalBlack</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalColor</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalCopies</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalCopiesBlack</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalPrints</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalPrintsBlack</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalFaxes</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">totalScans</span>
+<span class="nt">supplies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">blackToner</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">type</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">color</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">description</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">pctRemaining</span>
+<span class="w">  </span><span class="nt">cyanToner</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">type</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">color</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">description</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">pctRemaining</span>
+<span class="w">  </span><span class="nt">waste</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">type</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">description</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">pctRemaining</span>
+</code></pre></div></p>
+<p>In order to make this hierarchy compatible with standard SQL syntax, we've flattened it -- every hierarchy level is separated with an underscore. We could translate the previous hierarchy to this:</p>
+<div class="highlight"><pre><span></span><code>pageCounts_default_total
+pageCounts_default_totalBlack
+pageCounts_default_totalColor
+pageCounts_default_totalCopies
+pageCounts_default_totalCopiesBlack
+pageCounts_default_totalPrints
+pageCounts_default_totalPrintsBlack
+pageCounts_default_totalFaxes
+pageCounts_default_totalScans
+pageCounts_equiv_total
+pageCounts_equiv_totalBlack
+pageCounts_equiv_totalColor
+pageCounts_equiv_totalCopies
+pageCounts_equiv_totalCopiesBlack
+pageCounts_equiv_totalPrints
+pageCounts_equiv_totalPrintsBlack
+pageCounts_equiv_totalFaxes
+pageCounts_equiv_totalScans
+pageCounts_life_total
+pageCounts_life_totalBlack
+pageCounts_life_totalColor
+pageCounts_life_totalCopies
+pageCounts_life_totalCopiesBlack
+pageCounts_life_totalPrints
+pageCounts_life_totalPrintsBlack
+pageCounts_life_totalFaxes
+pageCounts_life_totalScans
+supplies_blackToner_type
+supplies_blackToner_color
+supplies_blackToner_description
+supplies_blackToner_pctRemaining
+supplies_cyanToner_type
+supplies_cyanToner_color
+supplies_cyanToner_description
+supplies_cyanToner_pctRemaining
+supplies_waste_type
+supplies_waste_description
+supplies_waste_pctRemaining
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../../../javascripts/tables.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
