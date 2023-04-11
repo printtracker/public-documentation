@@ -3,14 +3,14 @@ The data collection agent is a lightweight application that runs as a Windows se
 ## System Requirements
 Many of the following system requirements depend on the number of devices that are going to be tracked by this data collection agent. For networks with less than 100 devices, the minimum system requirements should be sufficient. For all other network sizes, we recommend that you install the data collection agent on a machine that meets the recommended system requirements.
 
-||Minimum|Recommended|
-|--|--|--|
-|Operating System|Windows[^1]||
-|CPU|1GHz x 2 cores|3GHz x 4 cores|
-|Memory|500MB|4GB|
-|Disk|2GB HDD|10GB SSD|
-|Browser|<ul><li>Microsoft Edge</li><li>Mozilla Firefox</li><li>Google Chrome</li></ul>||
-|Other Considerations|The data collection agent should not be installed on a laptop or any other machine that frequently shuts down, or the reliability may be affected.||
+|| Minimum                                                                                                                                            |Recommended|
+|--|----------------------------------------------------------------------------------------------------------------------------------------------------|--|
+|Operating System| Windows[^1], macOS, Linux[^2]                                                                                                                      ||
+|CPU| 1GHz x 2 cores                                                                                                                                     |3GHz x 4 cores|
+|Memory| 500MB                                                                                                                                              |4GB|
+|Disk| 2GB HDD                                                                                                                                            |10GB SSD|
+|Browser| <ul><li>Microsoft Edge</li><li>Mozilla Firefox</li><li>Google Chrome</li></ul>                                                                     ||
+|Other Considerations| The data collection agent should not be installed on a laptop or any other machine that frequently shuts down, or the reliability may be affected. ||
 
 ## Network Requirements
 
@@ -32,3 +32,4 @@ Data collection requires internet connectivity in order for meters and alerts to
 If [Advanced Troubleshooting Mode](./advanced-troubleshooting-mode.md) is enabled, you will need to make sure your network is compatible with the [Tailscale](https://tailscale.com/kb/1082/firewall-ports/#what-if-i-really-really-want-to-specify-the-hostnames-that-tailscale-uses-to-operate-its-service) network requirements.
 
 [^1]: Print Tracker Pro runs on all versions of Windows that are actively supported by Microsoft and have not reached end-of-life.
+[^2]: Print Tracker Pro has beta support for Linux. It has been tested on Ubuntu 18, Debian 10, and Raspbian 10.
